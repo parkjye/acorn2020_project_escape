@@ -1,0 +1,59 @@
+#bootstrap-overrides .navbar-padding{
+	padding: 0.5rem 5rem;
+}
+
+#bootstrap-overrides .idbox{
+	width: 14rem;
+}
+#bootstrap-overrides .contentbox{
+	width: 364px;
+	height: 300px;
+}
+
+#myCarousel{
+    height: 500px;
+    margin: 0 auto;
+}
+.carousel-caption {
+  transform: translateY(-60%);
+  bottom: 0;
+  top: 60%;
+}
+.myBox{
+	widows: 250px;
+	height: 250px;
+	background-color: #fff;
+	border-radius: 30px;
+} 
+
+hr.dashed {
+    border-top: 1px solid #ff0000;
+    color: red;
+}
+.mainbg1{background: url('../img/main_img01.jpg') no-repeat 50% 50%; }
+.mainbg2{background: url('../img/main_img02.jpg') no-repeat 50% 50%; }
+.mainbg3{background: url('../img/main_img03.jpg') no-repeat 50% 50%; }
+
+
+@media (max-width: 575.98px) { }
+
+
+@media (max-width: 767.98px) {
+.carousel-caption {
+	  transform: translateY(-50%);
+	  bottom: 0;
+	  top: 50%;
+	}		
+}
+
+
+@media (max-width: 991.98px) { 
+	.carousel-caption {
+	  transform: translateY(-55%);
+	  bottom: 0;
+	  top: 55%;
+	}	
+}
+
+
+@media (max-width: 1199.98px) { }
