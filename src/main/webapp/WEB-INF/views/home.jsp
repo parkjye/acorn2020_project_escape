@@ -32,19 +32,19 @@
 	    </ol>
 	    <div class="carousel-inner">
 	      <div class="carousel-item">
-	        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+	      	<img src="/escape/resources/img/main_img03.jpg" width="100%" height="100%"  alt="" />
 			<div class="carousel-caption">
 			  <h1>방안에 모든것이 단서다! 지금 이 순간! 큐브에 도전하세요!</h1>
 			</div>
 	      </div>
-	      <div class="carousel-item">
-	        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+	      <div class="carousel-item ">
+            <img src="/escape/resources/img/main_img01.jpg" width="100%" height="100%"  alt="" />
 			<div class="carousel-caption">
 			  <h1>주어진 시간은 단 60분!</h1>
 			</div>
 	      </div>
 	      <div class="carousel-item active">
-	        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+			<img src="/escape/resources/img/main_img02.jpg" width="100%" height="100%"  alt="" />
 			<div class="carousel-caption">
 			  <h1>전국 최대 100평 규모의 미스터리 방탈출 카페</h1>
 			</div>
@@ -66,7 +66,7 @@
 				<div class="col-lg-2"></div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
 					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h4 class="text-secondary">홍대점</h4>
+						<h5 class="text-secondary">홍대점</h5>
 						<hr class="w-50 solid">
 						<a href="">예약하기</a><br />
 						<a href="">테마소개</a><br />
@@ -75,7 +75,7 @@
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
 					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h4 class="text-secondary">대구점</h4>
+						<h5 class="text-secondary">대구점</h5>
 						<hr class="w-50 solid">
 						<a href="">예약하기</a><br />
 						<a href="">테마소개</a><br />
@@ -84,7 +84,7 @@
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
 					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h4 class="text-secondary">인천구월점</h4>
+						<h5 class="text-secondary">인천구월점</h5>
 						<hr class="w-50 solid">
 						<a href="">예약하기</a><br />
 						<a href="">테마소개</a><br />
@@ -93,7 +93,7 @@
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
 					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h4 class="text-secondary">전주점</h4>
+						<h5 class="text-secondary">전주점</h5>
 						<hr class="w-50 solid">
 						<a href="">예약하기</a><br />
 						<a href="">테마소개</a><br />
@@ -106,7 +106,7 @@
 				<div class="col-lg-2"></div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
 					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h4 class="text-secondary">잠실점</h4>
+						<h5 class="text-secondary">잠실점</h5>
 						<hr class="w-50 solid">
 						<a href="">예약하기</a><br />
 						<a href="">테마소개</a><br />
@@ -115,7 +115,7 @@
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
 					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h4 class="text-secondary">대전둔산점</h4>
+						<h5 class="text-secondary">대전둔산점</h5>
 						<hr class="w-50 solid">
 						<a href="">예약하기</a><br />
 						<a href="">테마소개</a><br />
@@ -124,7 +124,7 @@
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
 					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h4 class="text-secondary">천호점</h4>
+						<h5 class="text-secondary">천호점</h5>
 						<hr class="w-50 solid">
 						<a href="">예약하기</a><br />
 						<a href="">테마소개</a><br />
@@ -133,7 +133,7 @@
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
 					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h4 class="text-secondary">수유점</h4>
+						<h5 class="text-secondary">수유점</h5>
 						<hr class="w-50 solid">
 						<a href="">예약하기</a><br />
 						<a href="">테마소개</a><br />

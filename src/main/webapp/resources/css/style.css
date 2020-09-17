@@ -30,6 +30,10 @@ hr.dashed {
     border-top: 1px solid #ff0000;
     color: red;
 }
+.mainbg1{background: url('../img/main_img01.jpg') no-repeat 50% 50%; }
+.mainbg2{background: url('../img/main_img02.jpg') no-repeat 50% 50%; }
+.mainbg3{background: url('../img/main_img03.jpg') no-repeat 50% 50%; }
+
 
 @media (max-width: 575.98px) { }
 
