@@ -22,4 +22,10 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping("/intro")
+	public String intro() {
+		return "intro";
+	}
+	
+	
 }

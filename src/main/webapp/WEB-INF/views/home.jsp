@@ -5,20 +5,11 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<title>Home(Angular)</title>
-
  	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css?v=<%=System.currentTimeMillis() %>" />
- 	
- 	
- 	<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
-	<script src="${pageContext.request.contextPath}/resources/js/popper.min.js" /></script>
-	<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
-	<script src="${pageContext.request.contextPath}/resources/js/angular.min.js"></script>
-	<script src="${pageContext.request.contextPath}/resources/js/jquery-3.5.1.slim.min.js"></script>
  	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
-	
-<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+ 	<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
+	<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
+	<title>Home(Angular)</title>
 </head>
 <body id="bootstrap-overrides">
 <jsp:include page="templates/nav.jsp"></jsp:include>
@@ -143,10 +134,31 @@
 				<div class="col-lg-2"></div>
 			</div>
 		</div>
-		
-	
 	</section>
-	
+	<section class="bg-white">
+		<div class="container  pt-5">
+			<h3 class="text-primary text-center">주의 사항</h3>
+			<h5 class="text-primary text-center">안전한 문화생활을 위해 아래 준수사항을 꼭 지켜주시길 바랍니다.</h5>
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col my-5 d-flex flex-column justify-content-center align-items-center">
+					<img src="/escape/resources/img/notice01.jpg" alt="" />
+					<span class="text-primary mt-5">사진촬영금지</span>
+				</div>
+				<div class="col-lg-3 col-md-6 col my-5 d-flex flex-column justify-content-center align-items-center">
+					<img src="/escape/resources/img/notice02.jpg" alt="" />
+					<span class="text-primary mt-5">위험물질 반입금지</span>
+				</div>
+				<div class="col-lg-3 col-md-6 col my-5 d-flex flex-column justify-content-center align-items-center">
+					<img src="/escape/resources/img/notice03.jpg" alt="" />
+					<span class="text-primary mt-5">안전주의</span>
+				</div>
+				<div class="col-lg-3 col-md-6 col my-5 d-flex flex-column justify-content-center align-items-center">
+					<img src="/escape/resources/img/notice04.jpg" alt="" />
+					<span class="text-primary mt-5">물질파손주의</span>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>
 <jsp:include page="templates/footer.jsp"></jsp:include>
 
