@@ -25,7 +25,7 @@
         <a class="nav-link" href="#">공지/이벤트</a>
       </li>
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="#">오시는길</a>
+        <a class="nav-link" href="mapinfo/mapinfo.do">오시는길</a>
       </li>            
       <li class="nav-item ml-3 mr-3">
         <a class="nav-link" href="#">가맹문의</a>

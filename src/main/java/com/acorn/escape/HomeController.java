@@ -22,4 +22,19 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping("/mapinfo/mapinfo")
+	public String mapinfo() {
+		return "mapinfo/mapinfo";
+	}
+	
+	@RequestMapping("/mapinfo/hongdae")
+	public String hongdae() {
+		return "mapinfo/include/hongdae";
+	}
+	
+	@RequestMapping("/mapinfo/daegu")
+	public String daegu() {
+		return "mapinfo/include/daegu";
+	}
+	
 }
