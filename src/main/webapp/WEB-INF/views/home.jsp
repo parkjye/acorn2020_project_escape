@@ -5,20 +5,11 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<title>Home(Angular)</title>
-
  	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css?v=<%=System.currentTimeMillis() %>" />
- 	
- 	
- 	<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
-	<script src="${pageContext.request.contextPath}/resources/js/popper.min.js" /></script>
-	<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
-	<script src="${pageContext.request.contextPath}/resources/js/angular.min.js"></script>
-	<script src="${pageContext.request.contextPath}/resources/js/jquery-3.5.1.slim.min.js"></script>
  	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
-	
-<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+ 	<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
+	<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
+	<title>Home(Angular)</title>
 </head>
 <body id="bootstrap-overrides">
 <jsp:include page="templates/nav.jsp"></jsp:include>
@@ -60,93 +51,101 @@
 	    </a>
 	</div>
 	
-	<section class="bg-dark">
+	<!-- 지점소개 -->
+	<section class="myBack bg-dark p-5">
 		<div class="container">
+		<h3 class="text-center mt-5">지점별 예약/테마소개</h3>
+		<h5 class="text-center mt-4 mb-5">원하시는 지점에서 예약 가능한 일자 확인 또는 예약을 하시려면, 예약하기 버튼을 눌러 주세요.</h5>
 			<div class="row d-flex">
 				<div class="col-lg-2"></div>
-				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
-					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h5 class="text-secondary">홍대점</h5>
-						<hr class="w-50 solid">
-						<a href="">예약하기</a><br />
-						<a href="">테마소개</a><br />
-						<a href="">오시는길</a><br />
-					</div>
+				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
+					<h5>홍대점</h5>
+					<hr class="w-50 solid">
+					<a href="">예약하기</a>
+					<a href="">테마소개</a>
+					<a href="">오시는길</a>
 				</div>
-				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
-					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h5 class="text-secondary">대구점</h5>
-						<hr class="w-50 solid">
-						<a href="">예약하기</a><br />
-						<a href="">테마소개</a><br />
-						<a href="">오시는길</a><br />
-					</div>
+				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
+					<h5>대구점</h5>
+					<hr class="w-50 solid">
+					<a href="">예약하기</a>
+					<a href="">테마소개</a>
+					<a href="">오시는길</a>
 				</div>
-				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
-					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h5 class="text-secondary">인천구월점</h5>
-						<hr class="w-50 solid">
-						<a href="">예약하기</a><br />
-						<a href="">테마소개</a><br />
-						<a href="">오시는길</a><br />
-					</div>				
+				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
+					<h5>인천구월점</h5>
+					<hr class="w-50 solid">
+					<a href="">예약하기</a>
+					<a href="">테마소개</a>
+					<a href="">오시는길</a>
 				</div>
-				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
-					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h5 class="text-secondary">전주점</h5>
-						<hr class="w-50 solid">
-						<a href="">예약하기</a><br />
-						<a href="">테마소개</a><br />
-						<a href="">오시는길</a><br />
-					</div>				
+				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
+					<h5>전주점</h5>
+					<hr class="w-50 solid">
+					<a href="">예약하기</a>
+					<a href="">테마소개</a>
+					<a href="">오시는길</a>
 				</div>
 				<div class="col-lg-2"></div>
 			</div>
 			<div class="row d-flex">
 				<div class="col-lg-2"></div>
-				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
-					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h5 class="text-secondary">잠실점</h5>
-						<hr class="w-50 solid">
-						<a href="">예약하기</a><br />
-						<a href="">테마소개</a><br />
-						<a href="">오시는길</a><br />
-					</div>					
+				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
+					<h5>잠실점</h5>
+					<hr class="w-50 solid">
+					<a href="">예약하기</a>
+					<a href="">테마소개</a>
+					<a href="">오시는길</a>				
 				</div>
-				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
-					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h5 class="text-secondary">대전둔산점</h5>
-						<hr class="w-50 solid">
-						<a href="">예약하기</a><br />
-						<a href="">테마소개</a><br />
-						<a href="">오시는길</a><br />
-					</div>					
+				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
+					<h5>대전둔산점</h5>
+					<hr class="w-50 solid">
+					<a href="">예약하기</a>
+					<a href="">테마소개</a>
+					<a href="">오시는길</a>				
 				</div>
-				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
-					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h5 class="text-secondary">천호점</h5>
-						<hr class="w-50 solid">
-						<a href="">예약하기</a><br />
-						<a href="">테마소개</a><br />
-						<a href="">오시는길</a><br />
-					</div>					
+				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
+					<h5>천호점</h5>
+					<hr class="w-50 solid">
+					<a href="">예약하기</a>
+					<a href="">테마소개</a>
+					<a href="">오시는길</a>
 				</div>
-				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex justify-content-center align-items-center  my-4 mx-2">
-					<div class="container d-flex flex-column justify-content-center align-items-center">
-						<h5 class="text-secondary">수유점</h5>
-						<hr class="w-50 solid">
-						<a href="">예약하기</a><br />
-						<a href="">테마소개</a><br />
-						<a href="">오시는길</a><br />
-					</div>					
+				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
+					<h5>수유점</h5>
+					<hr class="w-50 solid">
+					<a href="">예약하기</a>
+					<a href="">테마소개</a>
+					<a href="">오시는길</a>
 				</div>
 				<div class="col-lg-2"></div>
 			</div>
 		</div>
-		
-	
 	</section>
-	
+	<section class="bg-white">
+		<div class="container  pt-5">
+			<h3 class="text-muted text-center">주의 사항</h3>
+			<h5 class="text-muted text-center">안전한 문화생활을 위해 아래 준수사항을 꼭 지켜주시길 바랍니다.</h5>
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col my-5 d-flex flex-column justify-content-center align-items-center">
+					<img src="/escape/resources/img/notice01.jpg" alt="" />
+					<span class="text-muted mt-5">사진촬영금지</span>
+				</div>
+				<div class="col-lg-3 col-md-6 col my-5 d-flex flex-column justify-content-center align-items-center">
+					<img src="/escape/resources/img/notice02.jpg" alt="" />
+					<span class="text-muted mt-5">위험물질 반입금지</span>
+				</div>
+				<div class="col-lg-3 col-md-6 col my-5 d-flex flex-column justify-content-center align-items-center">
+					<img src="/escape/resources/img/notice03.jpg" alt="" />
+					<span class="text-muted mt-5">안전주의</span>
+				</div>
+				<div class="col-lg-3 col-md-6 col my-5 d-flex flex-column justify-content-center align-items-center">
+					<img src="/escape/resources/img/notice04.jpg" alt="" />
+					<span class="text-muted mt-5">물질파손주의</span>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>
 <jsp:include page="templates/footer.jsp"></jsp:include>
 
