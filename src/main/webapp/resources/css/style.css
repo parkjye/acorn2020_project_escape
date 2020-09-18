@@ -25,13 +25,39 @@
 	background-color: #fff;
 	border-radius: 30px;
 } 
+.myBack{
+	background-image: url("/escape/resources/img/tweed.png");
+	width:100%;
+	height:100%;
+	
+}
 .myAlert{
 	
 }
-
-hr.dashed {
-    border-top: 1px solid #ff0000;
-    color: red;
+.branchStore{
+	background-color: #530101e3;
+	border: 1px solid black;
+	color: #fff;
+}
+.branchStore:hover{
+	background-color: rgba(0, 0, 0, 0.411);
+	transition: background-color 0.4s linear;
+}
+.branchStore h5{
+	color: #fff;
+}
+.branchStore a{
+	padding: 5px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	background-color: black;
+	color: #fff;
+}
+.branchStore div a{
+	margin: 0;
+}
+hr.solid {
+    border-top: 1px solid #ffffff;
 }
 .mainbg1{background: url('../img/main_img01.jpg') no-repeat 50% 50%; }
 .mainbg2{background: url('../img/main_img02.jpg') no-repeat 50% 50%; }
