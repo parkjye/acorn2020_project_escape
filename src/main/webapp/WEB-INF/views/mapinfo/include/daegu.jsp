@@ -43,42 +43,42 @@
 		<tr>
 		  <td>CGV대구한일앞<br>(02-238) </td>
 		  <td>
-			<span class="label label-info">간선</span> 156 , 323-1 , 524<br>
-			<span class="label label-danger">급행</span> 급행6  
+			<span class="badge badge-info">간선</span> 156 , 323-1 , 524<br>
+			<span class="badge badge-danger">급행</span> 급행6  
 		  </td>
 		</tr>
 		<tr>
 		  <td>2.28기념중앙공원앞<br>(02-326) </td>
 		  <td>
-			<span class="label label-info">간선</span> 234 , 240 , 309 , 425 , 518 , 650 , 724 , 909 , 939 <br>
-			<span class="label label-danger">급행</span> 급행1 , 급행3 , 급행5 
+			<span class="badge badge-info">간선</span> 234 , 240 , 309 , 425 , 518 , 650 , 724 , 909 , 939 <br>
+			<span class="badge badge-danger">급행</span> 급행1 , 급행3 , 급행5 
 		  </td>
 		</tr>
 		<tr>
 		  <td>2.28기념중앙공원건너1<br>(02-227) </td>
 		  <td>
-			<span class="label label-info">간선</span> 518 <br>
-			<span class="label label-success">지선</span> 가창2  <br>
-			<span class="label label-danger">급행</span> 급행1 , 급행3 , 급행5 , 급행6 
+			<span class="badge badge-info">간선</span> 518 <br>
+			<span class="badge badge-success">지선</span> 가창2  <br>
+			<span class="badge badge-danger">급행</span> 급행1 , 급행3 , 급행5 , 급행6 
 		  </td>
 		</tr>
 		<tr>
 		  <td>CGV대구한일건너<br>(02-239)</td>
 		  <td>
-			<span class="label label-info">간선</span> 156 , 234 , 240 , 309 , 323 , 425 , 524 , 724 , 939 , 980
+			<span class="badge badge-info">간선</span> 156 , 234 , 240 , 309 , 323 , 425 , 524 , 724 , 939 , 980
 		  </td>
 		</tr>
 		<tr>
 		  <td>2.28기념중앙공원건너2<br>(02-230) </td>
 		  <td>
-			<span class="label label-info">간선</span> 650 , 909 
+			<span class="badge badge-info">간선</span> 650 , 909 
 		  </td>
 		</tr>
 		<tr>
 		  <td>2.28기념중앙공원건너2<br>(02-230) </td>
 		  <td>
-			<span class="label label-info">간선</span> 삼덕성당앞 (01-029) <br>
-			<span class="label label-success">지선</span> 동구2   
+			<span class="badge badge-info">간선</span> 삼덕성당앞 (01-029) <br>
+			<span class="badge badge-success">지선</span> 동구2   
 		  </td>
 		</tr>
 	  </tbody>

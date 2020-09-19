@@ -63,28 +63,28 @@
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>
+					<a href="mapinfo/mapinfo.do#/hongdae">오시는길</a>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>대구점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>
+					<a href="mapinfo/mapinfo.do#/daegu">오시는길</a>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>인천구월점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>
+					<a href="mapinfo/mapinfo.do#/incheon">오시는길</a>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>전주점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>
+					<a href="mapinfo/mapinfo.do#/jeonju">오시는길</a>
 				</div>
 				<div class="col-lg-2"></div>
 			</div>
@@ -95,28 +95,28 @@
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>				
+					<a href="mapinfo/mapinfo.do#/jamsil">오시는길</a>				
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>대전둔산점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>				
+					<a href="mapinfo/mapinfo.do#/daejeon">오시는길</a>				
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>천호점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>
+					<a href="mapinfo/mapinfo.do#/cheonho">오시는길</a>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>수유점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>
+					<a href="mapinfo/mapinfo.do#/suyu">오시는길</a>
 				</div>
 				<div class="col-lg-2"></div>
 			</div>
