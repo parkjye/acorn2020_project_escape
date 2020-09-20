@@ -9,7 +9,15 @@
 	width: 364px;
 	height: 300px;
 }
-
+@font-face {
+	font-family: 'HeirofLightBold';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+body{
+    font-family: 'HeirofLightBold';
+}	
 #myCarousel{
     height: 500px;
     margin: 0 auto;
@@ -28,9 +36,6 @@
 .myBack{
 	background-image: url("/escape/resources/img/tweed.png");
 
-	
-}
-.myAlert{
 	
 }
 .branchStore{
@@ -61,6 +66,40 @@ hr.solid {
 .mainbg1{background: url('../img/main_img01.jpg') no-repeat 50% 50%; }
 .mainbg2{background: url('../img/main_img02.jpg') no-repeat 50% 50%; }
 .mainbg3{background: url('../img/main_img03.jpg') no-repeat 50% 50%; }
+
+.circle_padding{
+  	padding: 5px;
+}
+#branch {
+	margin-top: 5%;
+    text-align: center;
+}
+#branch a{
+	padding-left: 3%;
+    padding-right: 3%;
+}
+.avatar{
+	height: 100px;
+	width: 100px;
+	text-align: center;
+}
+      
+.page-change-animation.ng-enter{
+	animation: fadeIn 0.4s ease-out;
+}
+#info{
+	zoom: 1;
+	margin-top:2%;
+	margin-bottom:2%;	
+}
+#branch a { 
+	text-decoration:none 
+} 
+
+
+
+
+
 
 
 @media (max-width: 575.98px) { }

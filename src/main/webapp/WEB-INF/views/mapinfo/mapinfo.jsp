@@ -9,48 +9,11 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css" />
 <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
 <script src="..//resources/js/angular.min.js"></script>
 <script src="../resources/js/angular-route.min.js"></script>
 <script src="../resources/js/angular-animate.min.js"></script>
 <script src="../resources/js/jquery-3.5.1.js"></script>
-<style>
-	@font-face {
-    		font-family: 'HeirofLightBold';
-    		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff');
-    		font-weight: normal;
-    		font-style: normal;
-		}
-		.circle_padding{
-    		padding: 5px;
-    	}
-        body{
-        	font-family: 'HeirofLightBold';
-        }
-        #branch {
-        	margin-top: 5%;
-        	text-align: center;
-        }
-        #branch a{
-        	padding-left: 3%;
-        	padding-right: 3%;
-        }
-        img{
-        	height: 100px;
-        	width: 100px;
-        	text-align: center;
-        }
-        .page-change-animation.ng-enter{
-		animation: fadeIn 0.4s ease-out;
-		}
-		#info{
-    		zoom: 1;
-    		margin-top:2%;
-    		margin-bottom:2%;	
-    	}
-    	#branch a { 
-    		text-decoration:none 
-    	} 
-</style>
 <script>
 	var myApp=angular.module("myApp", ["ngRoute","ngAnimate"]);
 	//싱글 페이지 라우터를 사용하기 위한 설정 
@@ -99,35 +62,35 @@
 					if(path == "#hongdae"){
 						x=37.553419;
 						y=126.920605;
-						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 홍대점</span></h1><br/><img src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
+						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 홍대점</span></h1><br/><img class="avatar" src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
 					}else if(path == "#daegu"){
 						x=35.869640;
 						y=128.596974;
-						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 대구점</span></h1><br/><img src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
+						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 대구점</span></h1><br/><img class="avatar" src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
 					}else if(path == "#incheon"){
 						x=37.444135;
 						y=126.702761;
-						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 인천구월점</span></h1><br/><img src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
+						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 인천구월점</span></h1><br/><img class="avatar" src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
 					}else if(path == "#jeonju"){
 						x=35.815600;
 						y=127.110433;
-						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 전주점</span></h1><br/><img src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
+						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 전주점</span></h1><br/><img class="avatar"src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
 					}else if(path == "#jamsil"){
 						x=37.510770;
 						y=127.079955;
-						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 잠실점</span></h1><br/><img src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
+						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 잠실점</span></h1><br/><img class="avatar" src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
 					}else if(path == "#daejeon"){
 						x=36.350690;
 						y=127.374909;
-						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 대전 두산점</span></h1><br/><img src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
+						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 대전 두산점</span></h1><br/><img class="avatar" src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
 					}else if(path == "#cheonho"){
 						x=37.538620;
 						y=127.127454;
-						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 천호점</span></h1><br/><img src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
+						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프 천호점</span></h1><br/><img class="avatar" src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
 					}else if(path == "#suyu"){
 						x=37.638344;
 						y=127.024850;
-						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프  수유점</span></h1><br/><img src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
+						context= '<div style="padding:5px;"><h1><span class="badge badge-info">ACORN 이스케이프  수유점</span></h1><br/><img class="avatar" src="../resources/images/unnamed.png" /><br/><h5 class="text-center" style="color:black;">지금 바로 탈출해 보세요!</h5> </div>';
 					}else{
 						x=37.553419;
 						y=126.920605;

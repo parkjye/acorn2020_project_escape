@@ -9,7 +9,7 @@
  	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
  	<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
 	<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
-	<title>Cube Escape</title>
+	<title>Acorn Escape</title>
 </head>
 <body id="bootstrap-overrides">
 <jsp:include page="templates/nav.jsp"></jsp:include>
