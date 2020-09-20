@@ -9,7 +9,7 @@
  	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
  	<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
 	<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
-	<title>Home(Angular)</title>
+	<title>Cube Escape</title>
 </head>
 <body id="bootstrap-overrides">
 <jsp:include page="templates/nav.jsp"></jsp:include>
@@ -52,76 +52,79 @@
 	</div>
 	
 	<!-- 지점소개 -->
-	<section class="myBack bg-dark p-5">
+	<div class="myBack bg-dark p-5">
 		<div class="container">
-		<h3 class="text-center mt-5">지점별 예약/테마소개</h3>
-		<h5 class="text-center mt-4 mb-5">원하시는 지점에서 예약 가능한 일자 확인 또는 예약을 하시려면, 예약하기 버튼을 눌러 주세요.</h5>
-			<div class="row d-flex">
+			<h3 class="text-center mt-5">지점별 예약/테마소개</h3>
+			<h5 class="text-center mt-4 mb-5">원하시는 지점에서 예약 가능한 일자 확인 또는 예약을 하시려면, 예약하기 버튼을 눌러 주세요.</h5>
+			<div class="row d-flex flex-wrap">
 				<div class="col-lg-2"></div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>홍대점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>
+					<a href="mapinfo/mapinfo.do#/hongdae">오시는길</a>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>대구점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>
+					<a href="mapinfo/mapinfo.do#/daegu">오시는길</a>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>인천구월점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>
+					<a href="mapinfo/mapinfo.do#/incheon">오시는길</a>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>전주점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>
+					<a href="mapinfo/mapinfo.do#/jeonju">오시는길</a>
 				</div>
 				<div class="col-lg-2"></div>
 			</div>
-			<div class="row d-flex">
+			
+			
+			
+			<div class="row d-flex flex-wrap">
 				<div class="col-lg-2"></div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>잠실점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>				
+					<a href="mapinfo/mapinfo.do#/jamsil">오시는길</a>				
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>대전둔산점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>				
+					<a href="mapinfo/mapinfo.do#/daejeon">오시는길</a>				
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>천호점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>
+					<a href="mapinfo/mapinfo.do#/cheonho">오시는길</a>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>수유점</h5>
 					<hr class="w-50 solid">
 					<a href="">예약하기</a>
 					<a href="">테마소개</a>
-					<a href="">오시는길</a>
+					<a href="mapinfo/mapinfo.do#/suyu">오시는길</a>
 				</div>
 				<div class="col-lg-2"></div>
 			</div>
 		</div>
-	</section>
+	</div>
 	<section class="bg-white">
 		<div class="container  pt-5">
 			<h3 class="text-muted text-center">주의 사항</h3>
