@@ -16,7 +16,7 @@
         <a class="nav-link" href="#">테마</a>
       </li>
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="#">예약하기</a>
+        <a class="nav-link" href="reservation/reservation.do">예약하기</a>
       </li>
       <li class="nav-item ml-3 mr-3">
         <a class="nav-link" href="#">예약확인/취소</a>
