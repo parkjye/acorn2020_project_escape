@@ -1,45 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Thema</title>
-<link rel="stylesheet" href="../resources/css/bootstrap.css" />
-<style>
-	ul{
-		list-style: none;
-		margin: 0px;
-		margin-bottom: 30px;
-		float: left;
-	}
-	.thema-info{
-		border: 2px solid black;
-		padding: 10px;
-	}
-	.thema-image img{
-		width: 100%;
-		
-	}
-</style>
-</head>
-<body>
 <div class="container">
-	<!-- 테마 페이지 인트로 글  -->
-	<div class="text-center">
-		<h1 class="head-text">당신의 상상력,판단력,추리 능력은?</h1>
-		<p class="head-text">
-			CUBE Escape Game은 참가자가 실제 상황을 방불케 하는 특별한 테마 룸에 갇힌 채 60분 이내에<br/>
-			주어진 미션을 해결하여 탈출해야하는 신개념 문화/여가 시설입니다.<br/>
-			테마 룸 입장 후 주어진 시나리오에 따라 출입구는 봉쇄하며, 여러분의 명석한 두뇌로 주어진 퀴즈를 해결해 탈출하세요.<br/>
-		</p>
-	</div>
-	<!-- 모든 테마 소개 (28개 테마) -->
 	<ul class="thema-list col-md-4">
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room01.jpg" alt="테마: 피라미드의 비밀" />
+					<div class="image">
+						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room01.jpg" alt="테마: 피라미드의 비밀" />
+					</div>
 				</div>
 				<div class="text-center">난이도: 3/5</div>
 				<div class="text-center title">피라미드</div>
@@ -454,7 +422,5 @@
 				</div>
 			</div>
 		</li>
-	</ul>	
+	</ul>
 </div>
-</body>
-</html>

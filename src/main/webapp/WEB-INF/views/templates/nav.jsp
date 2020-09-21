@@ -13,7 +13,7 @@
         <a class="nav-link" href="/escape/intro.do">Escape <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="/escape/thema/all_thema.do">테마</a>
+        <a class="nav-link" href="/escape/thema/thema.do">테마</a>
       </li>
       <li class="nav-item ml-3 mr-3">
         <a class="nav-link" href="#">예약하기</a>
