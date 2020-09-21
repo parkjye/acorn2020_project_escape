@@ -96,20 +96,14 @@ hr.solid {
 	text-decoration:none 
 } 
 
-
-
-
-
-
-
 @media (max-width: 575.98px) { }
 
 
 @media (max-width: 767.98px) {
-.carousel-caption {
-	  transform: translateY(-50%);
-	  bottom: 0;
-	  top: 50%;
+	.carousel-caption {
+		  transform: translateY(-50%);
+		  bottom: 0;
+		  top: 50%;
 	}		
 }
 

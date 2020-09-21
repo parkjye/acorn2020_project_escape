@@ -10,7 +10,7 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav ml-auto mr-auto">
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="/escape/intro.do">Escape <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/escape/intro.do">Escape</a>
       </li>
       <li class="nav-item ml-3 mr-3">
         <a class="nav-link" href="#">테마</a>
@@ -25,7 +25,7 @@
         <a class="nav-link" href="#">공지/이벤트</a>
       </li>
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="/escape/mapinfo/mapinfo.do">오시는길</a>
+        <a class="nav-link" id="mapInfo" href="/escape/mapinfo/mapinfo.do">오시는길</a>
       </li>            
       <li class="nav-item ml-3 mr-3">
         <a class="nav-link" href="#">가맹문의</a>
