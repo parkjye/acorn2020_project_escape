@@ -72,5 +72,11 @@ public class HomeController {
 		return "intro";
 	}
 	
+	//테마
+	@RequestMapping("/thema/all_thema")
+	public String thema() {
+		return "thema/all_thema";
+	}
+	
 	
 }
