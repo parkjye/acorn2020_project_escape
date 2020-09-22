@@ -21,6 +21,15 @@
 	.thema-image img{
 		width: 100%;
 	}
+	.thema-image{
+		display: flex;
+	}
+	.image{
+		order: 1;
+	}
+	.note{
+		order: 2;
+	}
 </style>
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
 <script src="${pageContext.request.contextPath}/resources/js/angular.min.js"></script>
