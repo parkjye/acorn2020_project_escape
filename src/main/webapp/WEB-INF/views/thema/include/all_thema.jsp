@@ -1,34 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<script>
-//테마 설명 나타나도록 하는 script
-$(document).ready(function(){
-	$(".image").show();
-	$(".note").hide();
-	$(".image").click(function(){
-		$(".image").hide();
-		$(".note").show();
-		$(".note").click(function(){
-			$(".note").hide();
-			$(".image").show();
-		});
-	});
-	//div 사이즈 맞추기
-	var imageWidth=$(".image").width();
-	var imageHeight=$(".image").height();
-	$(".note").width(imageWidth);
-	$(".note").height(imageHeight);
-});
-</script>
+<script src="${pageContext.request.contextPath}/resources/js/thema_image_change.js"></script>
 <div class="container">
 	<ul class="thema-list col-md-4">
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image1">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room01.jpg" alt="테마: 피라미드의 비밀" />
 					</div>
-					<div class="note">
+					<div class="note" id="note1">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -51,10 +32,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image2">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room04.jpg" alt="테마: 헨젤과 그레텔" />
 					</div>
-					<div class="note">
+					<div class="note" id="note2">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -77,10 +58,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image3">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room06.jpg" alt="테마: Towering" />
 					</div>
-					<div class="note">
+					<div class="note" id="note3">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -103,10 +84,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image4">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room05.jpg" alt="테마: Gestapo" />
 					</div>
-					<div class="note">
+					<div class="note" id="note4">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -129,10 +110,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image5">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room02.jpg" alt="테마: Monkey House" />
 					</div>
-					<div class="note">
+					<div class="note"  id="note5">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -155,10 +136,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image6">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room03.jpg" alt="테마: 장기밀매" />
 					</div>
-					<div class="note">
+					<div class="note" id="note6">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -181,10 +162,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image7">
 						<img src="http://cheonho.cubeescape.co.kr/theme/basic_room2/img/rain/room21.jpg" alt="테마: 장기밀매 PART2" />
 					</div>
-					<div class="note">
+					<div class="note"  id="note7">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -207,10 +188,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image8">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room07.jpg" alt="테마: Deliver" />
 					</div>
-					<div class="note">
+					<div class="note"  id="note8">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -233,10 +214,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image9">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room08.jpg" alt="테마: RomeoPoint" />
 					</div>
-					<div class="note">
+					<div class="note" id="note9">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -259,10 +240,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image10">
 						<img src="http://daegu.cubeescape.co.kr/theme/basic_room2/img/rain/room09.jpg" alt="테마: 폼페이최후의날" />
 					</div>
-					<div class="note">
+					<div class="note" id="note10">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -284,11 +265,11 @@ $(document).ready(function(){
 	<ul class="thema-list col-md-4">
 		<li class="thema">
 			<div class="thema-info">
-				<div class="thema-image">
-					<div class="image">
+				<div class="thema-image" >
+					<div class="image" id="image11">
 						<img src="http://daegu.cubeescape.co.kr/theme/basic_room2/img/rain/room10.jpg" alt="테마: 집행" />
 					</div>
-					<div class="note">
+					<div class="note" id="note11">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -311,10 +292,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image"  id="image12">
 						<img src="http://daegu.cubeescape.co.kr/theme/basic_room2/img/rain/room11.jpg" alt="테마: 카타콤" />
 					</div>
-					<div class="note">
+					<div class="note" id="note12">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -336,11 +317,11 @@ $(document).ready(function(){
 	<ul class="thema-list col-md-4">
 		<li class="thema">
 			<div class="thema-info">
-				<div class="thema-image">
-					<div class="image">
+				<div class="thema-image" >
+					<div class="image" id="image13">
 						<img src="http://incheon.cubeescape.co.kr/theme/basic_room2/img/rain/room14.jpg" alt="테마: 타이타닉" />
 					</div>
-					<div class="note">
+					<div class="note" id="note13">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -363,10 +344,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image14">
 						<img src="http://incheon.cubeescape.co.kr/theme/basic_room2/img/rain/room12.jpg" alt="테마: 신데렐라" />
 					</div>
-					<div class="note">
+					<div class="note" id="note14">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -389,10 +370,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image15">
 						<img src="http://incheon.cubeescape.co.kr/theme/basic_room2/img/rain/room13.jpg" alt="테마: 집착" />
 					</div>
-					<div class="note">
+					<div class="note"  id="note15">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -415,10 +396,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image16">
 						<img src="http://junju.cubeescape.co.kr/theme/basic_room2/img/rain/room16.jpg" alt="테마: 좀비스쿨" />
 					</div>
-					<div class="note">
+					<div class="note" id="note16">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -441,10 +422,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image"  id="image17">
 						<img src="http://junju.cubeescape.co.kr/theme/basic_room2/img/rain/room17.jpg" alt="테마: 피고인" />
 					</div>
-					<div class="note">
+					<div class="note"  id="note17">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -467,10 +448,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image"  id="image18">
 						<img src="http://junju.cubeescape.co.kr/theme/basic_room2/img/rain/room18.jpg" alt="테마: 제시의 시크릿" />
 					</div>
-					<div class="note">
+					<div class="note" id="note18">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -493,10 +474,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image19">
 						<img src="http://jamsil.cubeescape.co.kr/theme/basic_room2/img/rain/room15.jpg" alt="테마: 마션" />
 					</div>
-					<div class="note">
+					<div class="note" id="note19">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -519,10 +500,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image20">
 						<img src="http://cheonho.cubeescape.co.kr/theme/basic_room2/img/rain/room19.jpg" alt="테마: The Cube" />
 					</div>
-					<div class="note">
+					<div class="note" id="note20">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -545,10 +526,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image21">
 						<img src="http://cheonho.cubeescape.co.kr/theme/basic_room2/img/rain/room20.jpg" alt="테마: The Maze" />
 					</div>
-					<div class="note">
+					<div class="note"  id="note21">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -571,10 +552,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image22">
 						<img src="http://cheonho.cubeescape.co.kr/theme/basic_room2/img/rain/room22.jpg" alt="테마: 사라진 천사들" />
 					</div>
-					<div class="note">
+					<div class="note" id="note22">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -597,10 +578,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
-						<img src="http://suyu.cubeescape.co.kr/theme/basic_room2/img/rain/sroom7.jpg" alt="테마: 마녀의 꿈" />
+					<div class="image" id="image23">
+						<img src="http://cheonho.cubeescape.co.kr/theme/basic_room2/img/rain/room23.jpg" alt="테마: 마녀의 꿈" />
 					</div>
-					<div class="note">
+					<div class="note" id="note23">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -623,10 +604,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image24">
 						<img src="http://cheonho.cubeescape.co.kr/theme/basic_room2/img/rain/room24.jpg" alt="테마: 장미의 비밀" />
 					</div>
-					<div class="note">
+					<div class="note" id="note24">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -649,10 +630,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image25">
 						<img src="http://suyu.cubeescape.co.kr/theme/basic_room2/img/rain/sroom1.jpg" alt="테마: Treasure Hunters(1):우든펍의 비밀" />
 					</div>
-					<div class="note">
+					<div class="note" id="note25">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -675,10 +656,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image26">
 						<img src="http://suyu.cubeescape.co.kr/theme/basic_room2/img/rain/sroom2.jpg" alt="테마: Treasure Hunters(2):빅토리아호의 침몰" />
 					</div>
-					<div class="note">
+					<div class="note" id="note26">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -701,10 +682,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image27"> 
 						<img src="http://suyu.cubeescape.co.kr/theme/basic_room2/img/rain/sroom3.jpg" alt="테마: Treasure Hunters(3):거미의 둥지" />
 					</div>
-					<div class="note">
+					<div class="note" id="note27">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -727,10 +708,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image28">
 						<img src="http://suyu.cubeescape.co.kr/theme/basic_room2/img/rain/sroom4.jpg" alt="테마: Treasure Hunters(4):골든 아이" />
 					</div>
-					<div class="note">
+					<div class="note" id="note28">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>

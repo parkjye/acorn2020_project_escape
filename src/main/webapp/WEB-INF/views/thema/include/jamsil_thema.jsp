@@ -1,34 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<script>
-//테마 설명 나타나도록 하는 script
-$(document).ready(function(){
-	$(".image").show();
-	$(".note").hide();
-	$(".image").click(function(){
-		$(".image").hide();
-		$(".note").show();
-		$(".note").click(function(){
-			$(".note").hide();
-			$(".image").show();
-		});
-	});
-	//div 사이즈 맞추기
-	var imageWidth=$(".image").width();
-	var imageHeight=$(".image").height();
-	$(".note").width(imageWidth);
-	$(".note").height(imageHeight);
-});
-</script>
+<script src="${pageContext.request.contextPath}/resources/js/thema_image_change.js"></script>
 <div class="container">
 	<ul class="thema-list col-md-4">
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image9">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room08.jpg" alt="테마: RomeoPoint" />
 					</div>
-					<div class="note">
+					<div class="note" id="note9">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -51,10 +32,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image14">
 						<img src="http://incheon.cubeescape.co.kr/theme/basic_room2/img/rain/room12.jpg" alt="테마: 신데렐라" />
 					</div>
-					<div class="note">
+					<div class="note" id="note14">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -77,10 +58,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image"  id="image15">
 						<img src="http://incheon.cubeescape.co.kr/theme/basic_room2/img/rain/room13.jpg" alt="테마: 집착" />
 					</div>
-					<div class="note">
+					<div class="note" id="note15">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -103,10 +84,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image19">
 						<img src="http://jamsil.cubeescape.co.kr/theme/basic_room2/img/rain/room15.jpg" alt="테마: 마션" />
 					</div>
-					<div class="note">
+					<div class="note" id="note19">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -129,10 +110,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image13">
 						<img src="http://incheon.cubeescape.co.kr/theme/basic_room2/img/rain/room14.jpg" alt="테마: 타이타닉" />
 					</div>
-					<div class="note">
+					<div class="note" id="note13">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -155,10 +136,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image12">
 						<img src="http://daegu.cubeescape.co.kr/theme/basic_room2/img/rain/room11.jpg" alt="테마: 카타콤" />
 					</div>
-					<div class="note">
+					<div class="note" id="note12">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>

@@ -1,34 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<script>
-//테마 설명 나타나도록 하는 script
-$(document).ready(function(){
-	$(".image").show();
-	$(".note").hide();
-	$(".image").click(function(){
-		$(".image").hide();
-		$(".note").show();
-		$(".note").click(function(){
-			$(".note").hide();
-			$(".image").show();
-		});
-	});
-	//div 사이즈 맞추기
-	var imageWidth=$(".image").width();
-	var imageHeight=$(".image").height();
-	$(".note").width(imageWidth);
-	$(".note").height(imageHeight);
-});
-</script>
+<script src="${pageContext.request.contextPath}/resources/js/thema_image_change.js"></script>
 <div class="container">
 	<ul class="thema-list col-md-4">
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image1">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room01.jpg" alt="테마: 피라미드의 비밀" />
 					</div>
-					<div class="note">
+					<div class="note" id="note1">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -51,10 +32,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image2">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room04.jpg" alt="테마: 헨젤과 그레텔" />
 					</div>
-					<div class="note">
+					<div class="note" id="note2">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -77,10 +58,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image3">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room06.jpg" alt="테마: Towering" />
 					</div>
-					<div class="note">
+					<div class="note" id="note3">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -103,10 +84,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image4">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room05.jpg" alt="테마: Gestapo" />
 					</div>
-					<div class="note">
+					<div class="note" id="note4">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -129,10 +110,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image5">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room02.jpg" alt="테마: Monkey House" />
 					</div>
-					<div class="note">
+					<div class="note" id="note5">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -155,10 +136,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image6">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room03.jpg" alt="테마: 장기밀매" />
 					</div>
-					<div class="note">
+					<div class="note" id="note6">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -181,10 +162,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image8">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room07.jpg" alt="테마: Deliver" />
 					</div>
-					<div class="note">
+					<div class="note" id="note8">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
@@ -207,10 +188,10 @@ $(document).ready(function(){
 		<li class="thema">
 			<div class="thema-info">
 				<div class="thema-image">
-					<div class="image">
+					<div class="image" id="image9">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room08.jpg" alt="테마: RomeoPoint" />
 					</div>
-					<div class="note">
+					<div class="note" id="note9">
 						<span>
 							<p>설명칸입니다.</p>
 							<p>설명칸입니다.</p>
