@@ -232,7 +232,7 @@ $(document).ready(function(){
 	<ul class="thema-list col-md-4">
 		<li class="thema">
 			<div class="thema-info">
-				<<div class="thema-image">
+				<div class="thema-image">
 					<div class="image">
 						<img src="http://cubeescape.co.kr/theme/basic_room2/img/rain/room08.jpg" alt="테마: RomeoPoint" />
 					</div>
