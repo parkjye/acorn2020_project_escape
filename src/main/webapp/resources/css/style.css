@@ -96,6 +96,47 @@ hr.solid {
 	text-decoration:none 
 } 
 
+/* thema pages */
+.thema{
+	opacity:0;
+	transition : opacity 150ms ease-in;
+}
+.thema ul{
+	list-style: none;
+	margin: 0px;
+	margin-bottom: 30px;
+	float: left;
+}
+.thema .thema__border{
+	border: 2px solid black;
+	padding: 10px;
+}
+.thema .thema__border img{
+	width: 100%;
+}
+.thema 	.thema__border img{
+	width: 100%;
+}
+.thema .wrap__box{
+	position: relative;
+}
+.thema .thema__border__picture .note{
+	position :absolute;
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;
+	top: -0;
+	opacity: 0;
+	background-color: rgb(16, 37, 37);
+	width: 100%;
+	height: 100%;
+}
+.thema .thema__border__picture .note:hover{
+	opacity: 1;
+	transition: opacity 0.5s linear;
+}
+
 @media (max-width: 575.98px) { }
 
 
