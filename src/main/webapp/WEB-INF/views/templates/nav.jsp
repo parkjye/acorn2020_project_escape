@@ -19,10 +19,10 @@
         <a class="nav-link" href="#">예약하기</a>
       </li>
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="#">예약확인/취소</a>
+        <a class="nav-link" href="${pageContext.request.contextPath }/confirm/list.do">예약확인/취소</a>
       </li>
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="#">공지/이벤트</a>
+        <a class="nav-link" href="${pageContext.request.contextPath }/notice/hongdae/list.do">공지/이벤트</a>
       </li>
       <li class="nav-item ml-3 mr-3">
         <a class="nav-link" id="mapInfo" href="/escape/mapinfo/mapinfo.do">오시는길</a>
