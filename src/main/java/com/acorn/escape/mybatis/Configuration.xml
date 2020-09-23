@@ -6,10 +6,13 @@
 	<typeAliases>
 		<typeAlias type="com.acorn.escape.notice.dto.NoticeDto"
 			alias="noticeDto"/>
+		<typeAlias type="com.acorn.escape.admin.dto.AdminDto"
+			alias="adminDto"/>
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="com/acorn/escape/mybatis/NoticeMapper.xml"/>
+		<mapper resource="com/acorn/escape/mybatis/AdminMapper.xml"/>
 	</mappers>
 </configuration>
 
