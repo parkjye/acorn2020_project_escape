@@ -29,6 +29,14 @@
 <div class="container">
 	<br/><br/><br/>
 	<h4>공지사항 - 홍대점</h4>
+	<c:choose>
+		<c:when test="${empty aid }">
+			<a href="${pageContext.request.contextPath }/admin/loginform.do">로그인</a>
+		</c:when>
+		<c:otherwise>
+			<a href="${pageContext.request.contextPath }/admin/logout.do">로그아웃</a>
+		</c:otherwise>
+	</c:choose>
 	<br/>
 	<div class="container" id="branch">
 		<button class="btn" onclick="location.href='../hongdae/list.do'">홍대점</button>
