@@ -67,9 +67,9 @@ public class HomeController {
 		return "mapinfo/include/suyu";
 	}
 	
-	@RequestMapping("/reservation/reservation")
+	@RequestMapping("/reservation/reservation2")
 	public String reservation() {
-		return "reservation/reservation";
+		return "reservation/reservation2";
 	}
 
 	@RequestMapping("/intro")
