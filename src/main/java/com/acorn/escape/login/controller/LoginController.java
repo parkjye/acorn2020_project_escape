@@ -25,8 +25,13 @@ public class LoginController {
 	public ModelAndView login(LoginDto dto, ModelAndView mView,
 			HttpSession session) {
 		loginService.loginProcess(dto, mView, session);
+		String id=(String)session.getAttribute("id");
 		// 예약관리 페이지 구현되면 다이렉트이동 시킬예정
-		mView.setViewName("/home");
+		if(id != null) {
+			mView.setViewName("home");
+		}else {//자바스크립트만 띄우고 싶은데 어떻게 띄우지 ㅠ 
+			mView.setViewName("login/login_form");
+		}
 		return mView;
 	}
 	
