@@ -37,7 +37,13 @@
 	<form action="insert.do" method="post">
 		<div class="form-group">
 			<label for="branch">지점</label>
-			<input class="form-control" type="text" name="branch", id="branch"/>
+			<!-- <input class="form-control" type="text" name="branch", id="branch"/> -->
+			<select name="branch" id="branch">
+				<option value="천호점">천호점</option>
+				<option value="수유점">수유점</option>
+				<option value="인천구월점">인천구월점</option>
+				<option value="홍대점">홍대점</option>
+			</select>
 		</div>
 		<div class="form-group">
 			<label for="writer">작성자</label>

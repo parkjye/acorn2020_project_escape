@@ -6,7 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>/views/cafe/list.jsp</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css?v=<%=System.currentTimeMillis() %>" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
 <style>
 	th,tr{
 		text-align: center; 
