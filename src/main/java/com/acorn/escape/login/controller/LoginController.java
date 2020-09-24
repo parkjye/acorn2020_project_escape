@@ -29,10 +29,11 @@ public class LoginController {
 		// 예약관리 페이지 구현되면 다이렉트이동 시킬예정
 		if(id != null) {
 			mView.setViewName("home");
+			return mView;
 		}else {//자바스크립트만 띄우고 싶은데 어떻게 띄우지 ㅠ 
-			mView.setViewName("login/login_form");
+			mView.setViewName("loginFail_redirect");
+			return mView;
 		}
-		return mView;
 	}
 	
 	@RequestMapping("/login/logout")
