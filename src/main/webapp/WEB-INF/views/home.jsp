@@ -13,6 +13,18 @@
 </head>
 <body id="bootstrap-overrides">
 <jsp:include page="templates/nav.jsp"></jsp:include>
+<!-- 점주만 들어갈 수 있는 로그인 페이지
+	 나중에 페이지들 구현되면 안보이게 끔 처리할 계획 -->
+<c:choose>
+	<c:when test="${empty id }">
+		<a href="${pageContext.request.contextPath}/login/login_form.do">로그인 폼</a>
+	</c:when>
+	<c:otherwise>
+		<p><strong>${id }</strong> 님 로그인 중...</p>
+		<a href="${pageContext.request.contextPath }/login/logout.do">로그아웃</a>
+	</c:otherwise>
+</c:choose>
+
 
 <main role="main">
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">

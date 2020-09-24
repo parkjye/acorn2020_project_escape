@@ -6,13 +6,12 @@
 	<typeAliases>
 		<typeAlias type="com.acorn.escape.notice.dto.NoticeDto"
 			alias="noticeDto"/>
-		<typeAlias type="com.acorn.escape.admin.dto.AdminDto"
-			alias="adminDto"/>
+		<typeAlias type="com.acorn.escape.login.dto.LoginDto" alias="loginDto"/>
 	</typeAliases>
-
+	<!-- Mapper 등록 -->
 	<mappers>
+		<mapper resource="com/acorn/escape/mybatis/LoginMapper.xml"/>
 		<mapper resource="com/acorn/escape/mybatis/NoticeMapper.xml"/>
-		<mapper resource="com/acorn/escape/mybatis/AdminMapper.xml"/>
 	</mappers>
 </configuration>
 
