@@ -14,4 +14,10 @@
 		WHERE bname=#{bname} AND thema=#{thema} AND resdate=#{resdate}
 		ORDER BY time ASC
 	</select>
+	
+	<insert id="resInsert" parameterType="resinfoDto" >
+		INSERT INTO res_info
+		(res_no,res_name,resdate,bname,thema,phone,cost,personal)
+		VALUES(#{res_no},#{res_name},#{resdate},#{bname},#{thema},#{phone},#{cost},#{personal}) 
+	</insert>
 </mapper>

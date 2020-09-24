@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.acorn.escape.timetable.dao.TimetableDao;
+import com.acorn.escape.timetable.dto.ResInfoDto;
 import com.acorn.escape.timetable.dto.TimetableDto;
 
 @Service
@@ -37,6 +38,22 @@ public class TimetableServiceImpl implements TimetableService {
 			map.put("list",list);
 		}
 		return map;
+	}
+
+	@Override
+	public void resInsert(HttpServletRequest request) {
+		String res_name=request.getParameter("resname");
+		String resdate=request.getParameter("resdate");
+		String time=request.getParameter("time");
+		String bname=request.getParameter("bname");
+		String thema=request.getParameter("thema");
+		String phone=request.getParameter("phone");
+		String cost=request.getParameter("cost");
+		String personal=request.getParameter("personal");
+		String res_no=phone.substring(phone.length()-4, phone.length());
+		System.out.println(res_no);
+		ResInfoDto dto=new ResInfoDto(res_no, res_name, resdate,time, bname, thema, phone, cost, personal);
+		timeDao.resInsert(dto);
 	}
 	
 	

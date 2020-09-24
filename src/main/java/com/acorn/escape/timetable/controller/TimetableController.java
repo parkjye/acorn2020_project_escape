@@ -1,5 +1,6 @@
 package com.acorn.escape.timetable.controller;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,5 +22,17 @@ public class TimetableController {
 	public Map<String, Object> reservation(HttpServletRequest request) {
 		 return timeService.getList(request);
 	}
+	
+	@RequestMapping("/reservation/res_process")
+	@ResponseBody
+	public Map<String, Object>  resprocess(HttpServletRequest request) {
+		System.out.println(request.getParameter("thema"));
+		timeService.resInsert(request);
+		Map<String, Object> map=new HashMap<String, Object>();
+		String success="isSuccess";
+		map.put("success", success);
+		return map;
+	}
+	
 
 }
