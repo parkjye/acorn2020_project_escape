@@ -8,11 +8,14 @@
 			alias="noticeDto"/>
 		<typeAlias type="com.acorn.escape.admin.dto.AdminDto"
 			alias="adminDto"/>
+		<typeAlias type="com.acorn.escape.confirm.dto.ConfirmDto"
+			alias="confirmDto"/>
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="com/acorn/escape/mybatis/NoticeMapper.xml"/>
 		<mapper resource="com/acorn/escape/mybatis/AdminMapper.xml"/>
+		<mapper resource="com/acorn/escape/mybatis/ConfirmMapper.xml"/>
 	</mappers>
 </configuration>
 

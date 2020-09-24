@@ -27,6 +27,29 @@
 	label{
 		color:black;
 	}
+	@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+select {
+  /* 생략 */
+  font-family: "Noto Sansf KR", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+  color: #444;
+  background-color: #fff;
+
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  margin: 0;
+
+  border: 1px solid #aaa;
+  border-radius: 0.5em;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+}
+
+
+}
+
 </style>
 </head>
 <body>
@@ -34,12 +57,21 @@
 <div class="container">
 	<br/>
 	<h3>공지/이벤트 작성</h3>
-	<form action="insert.do" method="post">
+	<form action="insert.do" method="post" id="notice">
+		<label for="condition">지점 선택</label>
+		</br>
+		<select name="branch" id="branch">
+			<option value="천호점">천호점</option>
+			<option value="대구점">대구점</option>
+			<option value="대전두산점">대전두산점</option>
+			<option value="홍대점">홍대점</option>
+			<option value="인천구월점">인천구월점</option>
+			<option value="잠실점">잠실점</option>
+			<option value="전주점">전주점</option>
+			<option value="수유점">수유점</option>
+		</select>
 		<div class="form-group">
-			<label for="branch">지점</label>
-			<input class="form-control" type="text" name="branch", id="branch"/>
-		</div>
-		<div class="form-group">
+		</br>
 			<label for="writer">작성자</label>
 			<input class="form-control" type="text" value="${aid }" disabled/>
 		</div>
@@ -52,7 +84,7 @@
 			<textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
 		</div>
 		<div class="button">
-			<button class="btn btn-outline-primary" type="submit" onclick="submitContents(this);">저장</button>
+			<button class="btn btn-outline-primary" type="submit" >저장</button>
 			<button class="btn btn-outline-danger" type="reset">취소</button>
 		</div>
 	</form>
@@ -109,6 +141,19 @@
 		var nFontSize = 24;
 		oEditors.getById["content"].setDefaultFont(sDefaultFont, nFontSize);
 	}
+	
+</script>
+<script src="${pageContext.request.contextPath }/resources/js/jquery-3.5.1.js"></script>
+<script>
+	$("#notice").on("submit", function(){	
+		var inputTitle=$("#title").val();
+		if(inputTitle==""){
+			alert("제목를(을) 입력하세요");
+			$("#title");
+			return false; 
+		}
+	});
+
 </script>
 <jsp:include page="../../templates/footer.jsp"></jsp:include>
 </body>

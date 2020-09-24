@@ -17,7 +17,7 @@ public class NoticeServiceImpl implements NoticeService{
 	@Autowired
 	private NoticeDao noticeDao;
 	
-	final int PAGE_ROW_COUNT=10;
+	final int PAGE_ROW_COUNT=30;
 	final int PAGE_DISPLAY_COUNT=5;
 	
 	@Override
