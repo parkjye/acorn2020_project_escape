@@ -36,19 +36,19 @@
 	    <div class="carousel-inner">
 	      <div class="carousel-item">
 	      
-	      	<img src="${pageContext.request.contextPath}/resources/img/main_img03.jpg" width="100%" height="100%"  alt="" />
+	      	<img src="./resources/img/main_img03.jpg" width="100%" height="100%"  alt="" />
 			<div class="carousel-caption">
 			  <h1>방안에 모든것이 단서다! 지금 이 순간! 큐브에 도전하세요!</h1>
 			</div>
 	      </div>
 	      <div class="carousel-item ">
-            <img src="${pageContext.request.contextPath}/resources/img/main_img01.jpg" width="100%" height="100%"  alt="" />
+            <img src="./resources/img/main_img01.jpg" width="100%" height="100%"  alt="" />
 			<div class="carousel-caption">
 			  <h1>주어진 시간은 단 60분!</h1>
 			</div>
 	      </div>
 	      <div class="carousel-item active">
-			<img src="${pageContext.request.contextPath}/resources/img/main_img02.jpg" width="100%" height="100%"  alt="" />
+			<img src="./resources/img/main_img02.jpg" width="100%" height="100%"  alt="" />
 			<div class="carousel-caption">
 			  <h1>전국 최대 100평 규모의 미스터리 방탈출 카페</h1>
 			</div>
@@ -141,19 +141,19 @@
 			<h5 class="text-muted text-center">안전한 문화생활을 위해 아래 준수사항을 꼭 지켜주시길 바랍니다.</h5>
 			<div class="row">
 				<div class="col-lg-3 col-md-6 col my-5 d-flex flex-column justify-content-center align-items-center">
-					<img src="${pageContext.request.contextPath}/resources/img/notice01.jpg" alt="" />
+					<img src="./resources/img/notice01.jpg" alt="" />
 					<span class="text-muted mt-5">사진촬영금지</span>
 				</div>
 				<div class="col-lg-3 col-md-6 col my-5 d-flex flex-column justify-content-center align-items-center">
-					<img src="${pageContext.request.contextPath}/resources/img/notice02.jpg" alt="" />
+					<img src="./resources/img/notice02.jpg" alt="" />
 					<span class="text-muted mt-5">위험물질 반입금지</span>
 				</div>
 				<div class="col-lg-3 col-md-6 col my-5 d-flex flex-column justify-content-center align-items-center">
-					<img src="${pageContext.request.contextPath}/resources/img/notice03.jpg" alt="" />
+					<img src="./resources/img/notice03.jpg" alt="" />
 					<span class="text-muted mt-5">안전주의</span>
 				</div>
 				<div class="col-lg-3 col-md-6 col my-5 d-flex flex-column justify-content-center align-items-center">
-					<img src="${pageContext.request.contextPath}/resources/img/notice04.jpg" alt="" />
+					<img src="./resources/img/notice04.jpg" alt="" />
 					<span class="text-muted mt-5">물질파손주의</span>
 				</div>
 			</div>
@@ -165,11 +165,11 @@
 </body>
 
 <script>
-document.cookie = `branch=all;path=/escape`;
+localStorage.setItem("branch","all");
 const themaLink = document.querySelectorAll(".branch_thema");
 for(let i = 0; i<themaLink.length; i++){
 	themaLink[i].addEventListener("click", function(evt){
-		document.cookie = `branch=\${this.dataset.branch};path=/escape`;
+		localStorage.setItem("branch",this.dataset.branch);
 	});
 }
 
