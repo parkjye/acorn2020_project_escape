@@ -83,7 +83,9 @@ public class ReviewServiceImpl implements ReviewService{
 		request.setAttribute("totalPageCount", totalPageCount);
 		request.setAttribute("condition", condition);
 		request.setAttribute("keyword", keyword);
-		request.setAttribute("encodedK", encodedK);	
+		request.setAttribute("encodedK", encodedK);
+		//
+		request.setAttribute("totalRow", totalRow);
 		
 	}
 

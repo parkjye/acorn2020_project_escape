@@ -11,6 +11,8 @@
 <body>
 	<div>
 		<h1>이용후기</h1>
+		<span>Total <strong>${totalRow }</strong> 건 <strong>${pageNum }</strong> 페이지</span>
+		
 		<input type="button" value="글쓰기" onClick="location.href='insert-form.do'">
 		<table class="table">
 		<thead>
@@ -39,7 +41,7 @@
 	<div class="page-display">
 		<ul class="pagination pagination-sm">
 		<c:if test="${startPageNum ne 1 }">
-			<li class="page-item"><a class="page-link" href="list.do?pageNum=${startPageNum-1 }&condition=${condition }&keyword=${encodedK }">Prev</a></li>
+			<li class="page-item"><a class="page-link" href="list.do?pageNum=${startPageNum-1 }&condition=${condition }&keyword=${encodedK }">이전</a></li>
 		</c:if>
 		<c:forEach var="i" begin="${startPageNum }" end="${endPageNum }">
 			<c:choose>
@@ -52,7 +54,7 @@
 			</c:choose>
 		</c:forEach>
 		<c:if test="${endPageNum lt totalPageCount }">
-			<li class="page-item"><a class="page-link" href="list.do?pageNum=${endPageNum+1 }&condition=${condition }&keyword=${encodedK }">Next</a></li>
+			<li class="page-item"><a class="page-link" href="list.do?pageNum=${endPageNum+1 }&condition=${condition }&keyword=${encodedK }">다음</a></li>
 		</c:if>
 		</ul>
 	</div>
