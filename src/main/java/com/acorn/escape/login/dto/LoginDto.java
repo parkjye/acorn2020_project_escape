@@ -1,33 +1,37 @@
 package com.acorn.escape.login.dto;
 
 public class LoginDto {
-	private String id;
-	private String pwd;
+	private String aid;
+	private String apwd;
 
 	
 	public LoginDto() {}
 
-	public LoginDto(String id, String pwd) {
+
+	public LoginDto(String aid, String apwd) {
 		super();
-		this.id = id;
-		this.pwd = pwd;
-
+		this.aid = aid;
+		this.apwd = apwd;
 	}
 
-	public String getId() {
-		return id;
+
+	public String getAid() {
+		return aid;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+
+	public void setAid(String aid) {
+		this.aid = aid;
 	}
 
-	public String getPwd() {
-		return pwd;
+
+	public String getApwd() {
+		return apwd;
 	}
 
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+
+	public void setApwd(String apwd) {
+		this.apwd = apwd;
 	}
-	
+
 }

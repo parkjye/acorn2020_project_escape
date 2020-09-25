@@ -25,12 +25,12 @@ public class LoginController {
 	public ModelAndView login(LoginDto dto, ModelAndView mView,
 			HttpSession session) {
 		loginService.loginProcess(dto, mView, session);
-		String id=(String)session.getAttribute("id");
+		String aid=(String)session.getAttribute("aid");
 		// 예약관리 페이지 구현되면 다이렉트이동 시킬예정
-		if(id != null) {
+		if(aid != null) {
 			mView.setViewName("home");
 			return mView;
-		}else {//자바스크립트만 띄우고 싶은데 어떻게 띄우지 ㅠ 
+		}else { 
 			mView.setViewName("loginFail_redirect");
 			return mView;
 		}

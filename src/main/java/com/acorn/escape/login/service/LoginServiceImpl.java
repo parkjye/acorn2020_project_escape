@@ -21,7 +21,7 @@ public class LoginServiceImpl implements LoginService{
 		boolean isValid=loginDao.isValid(dto);
 		
 		if(isValid) {
-			session.setAttribute("id", dto.getId());
+			session.setAttribute("aid", dto.getAid());
 			mView.addObject("isSuccess",true);
 		}else {
 			mView.addObject("isSuccess",false);
