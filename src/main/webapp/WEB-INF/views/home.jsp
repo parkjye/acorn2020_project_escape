@@ -74,63 +74,60 @@
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>홍대점</h5>
 					<hr class="w-50 solid">
-					<a href="">예약하기</a>
+					<a href="${pageContext.request.contextPath}/reservation/reservation.do?hongdae">예약하기</a>
 					<a class="branch_thema" href="${pageContext.request.contextPath}/thema/thema.do" data-branch="hongdae">테마소개</a>
 					<a href="${pageContext.request.contextPath}/mapinfo/mapinfo.do#/hongdae">오시는길</a>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>대구점</h5>
 					<hr class="w-50 solid">
-					<a href="">예약하기</a>
+					<a href="${pageContext.request.contextPath}/reservation/reservation.do?daegu">예약하기</a>
 					<a class="branch_thema" href="${pageContext.request.contextPath}/thema/thema.do" data-branch="daegu">테마소개</a>
 					<a href="${pageContext.request.contextPath}/mapinfo/mapinfo.do#/daegu">오시는길</a>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>인천구월점</h5>
 					<hr class="w-50 solid">
-					<a href="">예약하기</a>
+					<a href="${pageContext.request.contextPath}/reservation/reservation.do?incheon">예약하기</a>
 					<a class="branch_thema" href="${pageContext.request.contextPath}/thema/thema.do"  data-branch="incheon">테마소개</a>
 					<a href="${pageContext.request.contextPath}/mapinfo/mapinfo.do#/incheon">오시는길</a>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>전주점</h5>
 					<hr class="w-50 solid">
-					<a href="">예약하기</a>
+					<a href="${pageContext.request.contextPath}/reservation/reservation.do?jeonju">예약하기</a>
 					<a class="branch_thema" href="${pageContext.request.contextPath}/thema/thema.do"  data-branch="jeonju">테마소개</a>
 					<a href="${pageContext.request.contextPath}/mapinfo/mapinfo.do#/jeonju">오시는길</a>
 				</div>
 				<div class="col-lg-2"></div>
 			</div>
-			
-			
-			
 			<div class="row d-flex flex-wrap">
 				<div class="col-lg-2"></div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>잠실점</h5>
 					<hr class="w-50 solid">
-					<a href="">예약하기</a>
+					<a href="${pageContext.request.contextPath}/reservation/reservation.do?jamsil">예약하기</a>
 					<a class="branch_thema" href="${pageContext.request.contextPath}/thema/thema.do"  data-branch="jamsil">테마소개</a>
 					<a href="${pageContext.request.contextPath}/mapinfo/mapinfo.do#/jamsil">오시는길</a>				
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>대전둔산점</h5>
 					<hr class="w-50 solid">
-					<a href="">예약하기</a>
+					<a href="${pageContext.request.contextPath}/reservation/reservation.do?doosan">예약하기</a>
 					<a class="branch_thema" href="${pageContext.request.contextPath}/thema/thema.do"  data-branch="daejeon">테마소개</a>
 					<a href="${pageContext.request.contextPath}/mapinfo/mapinfo.do#/daejeon">오시는길</a>				
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>천호점</h5>
 					<hr class="w-50 solid">
-					<a href="">예약하기</a>
+					<a href="${pageContext.request.contextPath}/reservation/reservation.do?cheonho">예약하기</a>
 					<a class="branch_thema" href="${pageContext.request.contextPath}/thema/thema.do"  data-branch="cheonho">테마소개</a>
 					<a href="${pageContext.request.contextPath}/mapinfo/mapinfo.do#/cheonho">오시는길</a>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>수유점</h5>
 					<hr class="w-50 solid">
-					<a href="">예약하기</a>
+					<a href="${pageContext.request.contextPath}/reservation/reservation.do?suyu">예약하기</a>
 					<a class="branch_thema" href="${pageContext.request.contextPath}/thema/thema.do"  data-branch="suyu">테마소개</a>
 					<a href="${pageContext.request.contextPath}/mapinfo/mapinfo.do#/suyu">오시는길</a>
 				</div>
