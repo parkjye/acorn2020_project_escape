@@ -1,35 +1,56 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
 <meta charset="UTF-8">
 <title>글쓰기</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.css" />
+<script src="${pageContext.request.contextPath }/resources/js/angular.min.js"></script>
+<script>
+	var myApp = angular.module("myApp",[]);
+	myApp.controller("formCtrl", function($scope, $http){});
+</script>
 </head>
 <body>
-<div>
+<div ng-controller="formCtrl">
 	<br/>
 	<h1>글쓰기</h1>
-	<form action="insert.do" method="post">
+	<form action="insert.do" method="post" name="myForm" novalidate>
 		<div class="form-group">
 			<label for="writer">이름</label>
-			<input class="form-control" type="text" name="writer" id="writer" />
+			<input class="form-control" type="text" name="writer" id="writer" 
+				ng-model="writer"
+				ng-required="true"
+				ng-class="{'is-invalid':(myForm.writer.$invalid) && myForm.writer.$dirty,'is-valid': myForm.writer.$valid}" />
+			<div class="invalid-feedback">필수항목 입니다.</div>
 		</div>
+		
 		<div class="form-group">
 			<label for="pwd">비밀번호</label>
-			<input class="form-control" type="password" name="pwd" id="pwd" />
+			<input class="form-control" type="password" name="pwd" id="pwd" 
+				ng-model="pwd"
+				ng-required="true"
+				ng-class="{'is-invalid': (myForm.pwd.$invalid) && myForm.pwd.$dirty , 'is-valid': myForm.pwd.$valid}" />
+			<div class="invalid-feedback">필수항목 입니다.</div>
 		</div>
+		
 		<div class="form-group">
 			<label for="title">제목</label>
-			<input class="form-control" type="text" name="title" id="title"/>
+			<input class="form-control" type="text" name="title" id="title"
+				ng-model="title" 
+				ng-required="true" 
+				ng-class="{'is-invalid': (myForm.title.$invalid) && myForm.title.$dirty , 'is-valid': myForm.title.$valid}" />
+			<div class="invalid-feedback">필수항목 입니다.</div>
 		</div>
+		
 		<div class="form-group">
 			<label for="content">내용</label>
 			<textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
 		</div>
+		
 		<div class="btnWrap" style="text-align:center">
-			<button class="btn btn-outline-primary" type="submit" onclick="submitContents(this);">작성완료</button>
+			<button ng-disabled="myForm.$invalid" class="btn btn-outline-primary" type="submit" onclick="submitContents(this);">작성완료</button>
 			<button class="btn btn-outline-danger" type="reset">취소</button>
 		</div>
 	</form>
