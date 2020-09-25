@@ -25,5 +25,10 @@ public class TimetableDaoImpl implements TimetableDao {
 	public void resInsert(ResInfoDto dto) {
 		session.insert("timetable.resInsert",dto);
 	}
+	@Override
+	public void stateUpdate(ResInfoDto dto) {
+		session.update("timetable.stateUpdate",dto);
+		
+	}
 
 }

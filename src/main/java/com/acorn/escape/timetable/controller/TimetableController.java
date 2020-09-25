@@ -25,8 +25,7 @@ public class TimetableController {
 	
 	@RequestMapping("/reservation/res_process")
 	@ResponseBody
-	public Map<String, Object>  resprocess(HttpServletRequest request) {
-		System.out.println(request.getParameter("thema"));
+	public Map<String, Object> resprocess(HttpServletRequest request) {
 		timeService.resInsert(request);
 		Map<String, Object> map=new HashMap<String, Object>();
 		String success="isSuccess";

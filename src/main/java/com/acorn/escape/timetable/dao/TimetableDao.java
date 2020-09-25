@@ -9,4 +9,5 @@ public interface TimetableDao {
 	public List<TimetableDto> getTable(TimetableDto dto);
 	public List<TimetableDto> getTable2(TimetableDto dto);
 	public void resInsert(ResInfoDto dto);
+	public void stateUpdate(ResInfoDto dto);
 }

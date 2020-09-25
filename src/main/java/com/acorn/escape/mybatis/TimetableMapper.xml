@@ -17,7 +17,13 @@
 	
 	<insert id="resInsert" parameterType="resinfoDto" >
 		INSERT INTO res_info
-		(res_no,res_name,resdate,bname,thema,phone,cost,personal)
-		VALUES(#{res_no},#{res_name},#{resdate},#{bname},#{thema},#{phone},#{cost},#{personal}) 
+		(res_no,res_name,resdate,time,bname,thema,phone,cost,personal)
+		VALUES(#{res_no},#{res_name},#{resdate},#{time},#{bname},#{thema},#{phone},#{cost},#{personal}) 
 	</insert>
+	
+	<update id="stateUpdate" parameterType="resinfoDto">
+		UPDATE res_state
+		SET state = '매진'
+		WHERE resdate=#{resdate} AND time=#{time} AND thema=#{thema}
+	</update>
 </mapper>

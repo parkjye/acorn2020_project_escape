@@ -51,10 +51,11 @@ public class TimetableServiceImpl implements TimetableService {
 		String cost=request.getParameter("cost");
 		String personal=request.getParameter("personal");
 		String res_no=phone.substring(phone.length()-4, phone.length());
-		System.out.println(res_no);
 		ResInfoDto dto=new ResInfoDto(res_no, res_name, resdate,time, bname, thema, phone, cost, personal);
 		timeDao.resInsert(dto);
+		timeDao.stateUpdate(dto);
 	}
+
 	
 	
 }

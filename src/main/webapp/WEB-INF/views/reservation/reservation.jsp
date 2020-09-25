@@ -111,6 +111,7 @@
 				params:{name:$scope.branches,thema:$scope.thema,date:$scope.date}
 			}).success(function(data){
 				$scope.list=data.list;
+				
 			});
 		};
 	});
@@ -156,11 +157,12 @@
 				<tr data-ng-repeat="tmp in list" class="row">
 					<td class="col-3 text-center">{{tmp.time}}</td>
 					<td class="col-6 text-center">{{tmp.thema}}</td>
-					<td class="col-3 text-center"><a data-ng-href="/escape/reservation/reservation2.do?date={{date}}&&bname={{branches}}&&time={{tmp.time}}&&thema={{tmp.thema}}"><span class="badge badge-info">{{tmp.state}}</span></a></td>
+					<td data-ng-if="tmp.state=='매진'" class="col-3 text-center" ><a  data-ng-href="#"><span class="badge badge-danger">{{tmp.state}}</span></a></td>
+					<td data-ng-if="tmp.state=='예약하기'" class="col-3 text-center"><a  data-ng-href="/escape/reservation/reservation2.do?date={{date}}&&bname={{branches}}&&time={{tmp.time}}&&thema={{tmp.thema}}"><span class="badge badge-info">{{tmp.state}}</span></a></td>
 				</tr>
 			</tbody>
 		</table>
-		<button style="margin-left: 90%" type="button" class="btn-lg btn-primary">예약취소</button>
+		<button style="margin-left: 85%" type="button" class="btn-lg btn-primary">예약취소</button>
 	</div>
 </div>
 <jsp:include page="../templates/footer.jsp"></jsp:include>
