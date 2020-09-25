@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<script>
+	alert("삭제되었습니다.");
+	location.href="${pageContext.request.contextPath }/review/review-detail.do?num=${param.num}";
+</script>
 </body>
 </html>

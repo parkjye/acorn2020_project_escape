@@ -147,13 +147,13 @@ public class ReviewServiceImpl implements ReviewService{
 		
 		ReviewDto dto = reviewDao.getReview(num);
 		
-		//비밀번호 확인 후 삭제
+		/*비밀번호 확인 후 삭제
 		String pwd = (String)request.getSession().getAttribute("pwd");
 		
 		//비밀번호 다르면 예외처리
 		if(!pwd.equals(dto.getPwd())) {
 			
-		}
+		}*/
 	
 		reviewDao.deleteReview(num);
 	}
