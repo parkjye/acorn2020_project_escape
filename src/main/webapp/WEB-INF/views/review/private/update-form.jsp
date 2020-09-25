@@ -1,31 +1,53 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
 <meta charset="UTF-8">
 <title>글 수정</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.css" />
+<script src="${pageContext.request.contextPath }/resources/js/angular.min.js"></script>
+<script>
+	var myApp = angular.module("myApp",[]);
+	myApp.controller("formCtrl", function($scope, $http){
+		
+	});
+</script>
 </head>
 <body>
-<div>
+<div ng-controller="formCtrl">
 	<h1>글 수정 양식 입니다.</h1>
-	<form action="update.do" method="post">
-		<!-- 글번호 -->
+	<form action="update.do" method="post" name="myForm" novalidate>
+		<!-- 글번호, 비밀번호 hidden -->
 		<input type="hidden" name="num" value="${dto.num }"/>
-
+		<input type="hidden" name="pwd" value="${dto.pwd }"/>
+		
+		<div class="form-group">
+			<label for="writer">이름</label>
+			<input class="form-control" type="text" id="writer" name="writer" value="${dto.writer }" disabled/>
+		</div>
+		
+		<div class="form-group">
+			<label for="pwd">비밀번호</label>
+			<input class="form-control" type="password" name="pwd" id="pwd" 
+				ng-model="pwd"
+				ng-required="true"
+				ng-class="{'is-invalid': (myForm.pwd.$invalid) && myForm.pwd.$dirty, 'is-valid': myForm.pwd.$valid}" />
+			<div class="invalid-feedback">필수항목 입니다.</div>
+		</div>
+			
 		<div class="form-group">
 			<label for="title">제목</label>
-			<input class="form-control" type="text" id="title" name="title" 
-				value="${dto.title }"/>
+			<input class="form-control" type="text" id="title" name="title" value="${dto.title}"/>
 		</div>
+		
 		<div class="form-group">
 			<label for="content">내용</label>
 			<textarea class="form-control" name="content" id="content">${dto.content }</textarea>
 		</div>
 		
 		<div class="btnWrap" style="text-align:center">
-			<button class="btn btn-outline-primary" type="submit" onclick="submitContents(this);">수정완료</button>
+			<button ng-disabled="myForm.$invalid" class="btn btn-outline-primary" type="submit" onclick="submitContents(this);">수정완료</button>
 			<button class="btn btn-outline-danger" type="reset">취소</button>
 		</div>
 	</form>

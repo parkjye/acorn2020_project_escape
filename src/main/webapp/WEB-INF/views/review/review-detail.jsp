@@ -16,7 +16,7 @@
 			</p>
 		</c:if>
 		
-		<section>
+		<section>			
 			<h1>${dto.title }</h1>
 			
 			<label for="">작성자</label> <strong><span>${dto.writer }</span></strong>

@@ -44,15 +44,10 @@ public class ReviewController {
 	}
 	
 	@RequestMapping(value = "/review/insert", method=RequestMethod.POST)
-	public ModelAndView insert(ReviewDto reDto, ModelAndView mView, HttpSession session) {
-		
-		/*비밀번호 
-		String pwd = (String)session.getAttribute("pwd");
-		reDto.setPwd(pwd);*/
-		
+	public ModelAndView insert(ReviewDto reDto, ModelAndView mView, HttpSession session) {	
 		reviewService.saveContent(reDto);
-		
 		mView.setViewName("review/insert");
+		
 		return mView;
 	}
 	

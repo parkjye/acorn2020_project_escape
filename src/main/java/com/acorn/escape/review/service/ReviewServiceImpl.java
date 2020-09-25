@@ -6,9 +6,12 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.ModelAndView;
 
+import com.acorn.escape.exception.DoNotException;
 import com.acorn.escape.review.dao.ReviewDao;
 import com.acorn.escape.review.dto.ReviewDto;
 
@@ -141,7 +144,7 @@ public class ReviewServiceImpl implements ReviewService{
 		//비밀번호 받아서 인코딩 하고 dto에 다시 넣어준다.
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		String encodedPwd = encoder.encode(getPwd);
-		
+
 		reviewDto.setPwd(encodedPwd);
 		
 		//
@@ -151,23 +154,33 @@ public class ReviewServiceImpl implements ReviewService{
 
 	@Override
 	public void updateContent(ReviewDto reviewDto) {
+		//ReviewDto dto = reviewDao.getReview(num);
+
+		/*
+		ReviewDto dto = reviewDao.getReview(reviewDto.getNum());
+		
+		String encodedPwd = dto.getPwd();
+		System.out.println("encodedPwd: "+encodedPwd);
+		
+		String inputPwd = reviewDto.getPwd();
+		System.out.println("inputPwd: "+inputPwd);
+
+		//비밀번호 일치여부 확인 후 수정 혹은 Exception
+		if(BCrypt.checkpw(encodedPwd, inputPwd)) {
+			reviewDao.updateReview(reviewDto);
+			
+		}else {
+			throw new DoNotException("비밀번호가 다릅니다.");
+		}*/
+		
 		reviewDao.updateReview(reviewDto);
 		
 	}
 
 	@Override
 	public void deleteContent(int num, HttpServletRequest request) {
-		
-		ReviewDto dto = reviewDao.getReview(num);
-		
-		/*비밀번호 확인 후 삭제
-		String pwd = (String)request.getSession().getAttribute("pwd");
-		
-		//비밀번호 다르면 예외처리
-		if(!pwd.equals(dto.getPwd())) {
 			
-		}*/
-	
+		//
 		reviewDao.deleteReview(num);
 	}
 	
