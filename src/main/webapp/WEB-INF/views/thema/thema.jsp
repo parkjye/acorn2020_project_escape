@@ -28,17 +28,17 @@
 		</p>
 	</div>
 	<!-- 지점별 버튼 -->
-	<div class="text-center" style="margin-bottom: 2%">
+	<div class="text-center branch__box" style="margin-bottom: 2%">
 		<h5>원하시는 지점을 눌러주세요.</h5>
-		<a class="preview btn btn-warning" title="모든 테마" data-branch="all" >모든 테마</a>
-		<a class="preview btn btn-warning" title="홍대점 테마" data-branch="hongdae"  >홍대점</a>
-		<a class="preview btn btn-warning" title="대구점 테마" data-branch="daegu"  >대구점</a>
-		<a class="preview btn btn-warning" title="인천구월점 테마" data-branch="incheon"  >인천구월점</a>
-		<a class="preview btn btn-warning" title="전주점 테마" data-branch="jeonju"  >전주점</a>
-		<a class="preview btn btn-warning" title="잠실점 테마" data-branch="jamsil"  >잠실점</a>
-		<a class="preview btn btn-warning" title="대전둔산점 테마" data-branch="daejeon"  >대전둔산점</a>
-		<a class="preview btn btn-warning" title="천호점 테마" data-branch="cheonho"  >천호점</a>
-		<a class="preview btn btn-warning" title="수유점 테마" data-branch="suyu"  >수유점</a>
+		<a id="all" class="preview btn btn-warning" title="모든" data-branch="all" >모든 테마</a>
+		<a id="hongdae"class="preview btn btn-warning" title="홍대점" data-branch="hongdae"  >홍대점</a>
+		<a id="daegu" class="preview btn btn-warning" title="대구점" data-branch="daegu"  >대구점</a>
+		<a id="incheon" class="preview btn btn-warning" title="인천구월점" data-branch="incheon"  >인천구월점</a>
+		<a id="jeonju" class="preview btn btn-warning" title="전주점" data-branch="jeonju"  >전주점</a>
+		<a id="jamsil" class="preview btn btn-warning" title="잠실점" data-branch="jamsil"  >잠실점</a>
+		<a id="daejeon" class="preview btn btn-warning" title="대전둔산점" data-branch="daejeon"  >대전둔산점</a>
+		<a id="cheonho" class="preview btn btn-warning" title="천호점" data-branch="cheonho"  >천호점</a>
+		<a id="suyu" class="preview btn btn-warning" title="수유점" data-branch="suyu"  >수유점</a>
 	</div>	
 	<div class="thema container">
 	</div>    
@@ -46,95 +46,135 @@
 	let thema = "";
 	const box =document.querySelectorAll(".preview"); 
 	const themaele = document.querySelector(".thema");
+	const branchBox = document.querySelector(".branch__box");
+	const getCookieValue = (key) => {
+		  let cookieKey = key + "="; 
+		  let result = "";
+		  const cookieArr = document.cookie.split(";");
+		  
+		  for(let i = 0; i < cookieArr.length; i++) {
+		    if(cookieArr[i][0] === " ") {
+		      cookieArr[i] = cookieArr[i].substring(1);
+		    }
+		    
+		    if(cookieArr[i].indexOf(cookieKey) === 0) {
+		      result = cookieArr[i].slice(cookieKey.length, cookieArr[i].length);
+		      return result;
+		    }
+		  }
+		  return result;
+	}
+	let branch = getCookieValue("branch");
+	
 	for(let i=0; i<box.length; i++)
 	{
 		box[i].addEventListener("click",function(){
+			//액티브 클래스 초기화
+			var a = this.parentNode.getElementsByTagName("a");
+			for(let item of a){
+				if(item.classList.contains("active")){
+					item.classList.remove("active");
+				}
+			}
+			this.classList.add("active");
+			//
+			branch = this.dataset.branch;
+			document.cookie = `branch=\${branch};path=/escape`;
+			
 			themaele.style.opacity = 0;
-			render(this.dataset.branch);
+			render(getCookieValue("branch"));
 			setTimeout(() => {
 				themaele.style.opacity = 1;
-			}, 100);
+			}, 300);
 		});
 	}
 
 	function clone(obj){
 		var output = {};
-		for(var i in obj){
+		for(let i in obj){
 			output[i] = obj[i];
 		}
 		return output;
 	}
 	
-		const render = function(branch){
-			themaele.innerHTML = " ";
-			switch (branch) {
-			case "all":
-					thema =  allThema.slice();
-				break;
-			case "incheon":
-					thema =  incheonThema.slice();
-				break;
-			case "jeonju":
-					thema =  jeonjuThema.slice();
-				break;
-			case "daejeon":
-					thema =  daejeonThema.slice();
-				break;
-			case "cheonho":
-					thema = cheonhoThema.slice();
-				break;
-			case "daegu":
-					thema =  daeguThema.slice();
-				break;
-			case "hongdae":
+	const render = function(branch){
+		themaele.innerHTML = " ";
+		switch (branch) {
+		case "all":
+				thema =  allThema.slice();
+				document.getElementById("all").classList.add("active");
+			break;
+		case "incheon":
+				thema =  incheonThema.slice();
+				document.getElementById("incheon").classList.add("active");
+			break;
+		case "jeonju":
+				thema =  jeonjuThema.slice();
+				document.getElementById("jeonju").classList.add("active");
+			break;
+		case "daejeon":
+				thema =  daejeonThema.slice();
+				document.getElementById("daejeon").classList.add("active");
+			break;
+		case "cheonho":
+				thema = cheonhoThema.slice();
+				document.getElementById("cheonho").classList.add("active");
+			break;
+		case "daegu":
+				thema =  daeguThema.slice();
+				document.getElementById("daegu").classList.add("active");
+			break;
+		case "hongdae":
 				thema =  hongdaeThema.slice();
-				break;
-			case "suyu":
+				document.getElementById("hongdae").classList.add("active");
+			break;
+		case "suyu":
 				thema =  suyuThema.slice();
-				break;
-			case "jamsil":
+				document.getElementById("suyu").classList.add("active");
+			break;
+		case "jamsil":
 				thema =  jamsilThema.slice();
-				break;
-			default:
-				break;
-			}
-			
-			for(let item of thema){
-				document.querySelector(".thema").innerHTML += `
-			    <ul class="col-md-4">
-			        <li>
-			            <div class="thema__border">
-			                <div class="thema__border__picture">
-			                    <div>
-			                        <div class="wrap__box">
-			                            <img src="\${themaes[item].img}" alt="\${themaes[item].alt}" />
-			                            <div class="note">
-			                                \${themaes[item].contentsText}
-			                            </div>
-			                        </div>
-			                    </div>
-			                </div>
-			                <div class="text-center">\${themaes[item].level}</div>
-			                <div class="text-center title">\${themaes[item].title}</div>
-			                <div class="text-center">\${themaes[item].type}</div>
-			                <div class="text-center">
-			                    <a class="preview btn btn-warning" title="\${themaes[item].title}" href="">온라인 예약하기</a>
-			                </div>
-			            </div>
-			        </li>
-			    </ul>
-			`};
-		};
-		
-		//최초실행
-		{
-			themaele.style.opacity = 0;
-			render("all");
-			setTimeout(() => {
-				themaele.style.opacity = 1;
-			}, 250);
-			
+				document.getElementById("jamsil").classList.add("active");
+			break;
+		default:
+			break;
 		}
+		
+		for(let item of thema){
+			document.querySelector(".thema").innerHTML += `
+		    <ul class="col-md-4">
+		        <li>
+		            <div class="thema__border">
+		                <div class="thema__border__picture">
+		                    <div>
+		                        <div class="wrap__box">
+		                            <img class="thema_image" src="\${themaes[item].img}" alt="\${themaes[item].alt}" />
+		                            <div class="note">
+		                                \${themaes[item].contentsText}
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="text-center">\${themaes[item].level}</div>
+		                <div class="text-center title">\${themaes[item].title}</div>
+		                <div class="text-center">\${themaes[item].type}</div>
+		                <div class="text-center">
+		                    <a class="preview btn btn-warning" title="\${themaes[item].title}" href="">온라인 예약하기</a>
+		                </div>
+		            </div>
+		        </li>
+		    </ul>
+		`};
+	};
+		
+	//최초실행
+	{
+		themaele.style.opacity = 0;
+		render(getCookieValue("branch"));
+		setTimeout(() => {
+			themaele.style.opacity = 1;
+		}, 250);
+	}
 	</script>
 </div>
 </body>
