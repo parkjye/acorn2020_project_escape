@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="login">
 	<select id="isValid" parameterType="loginDto" resultType="string">
-		SELECT id
+		SELECT aid
 		FROM login
-		WHERE id=#{id} AND pwd=#{pwd}
+		WHERE aid=#{aid} AND apwd=#{apwd}
 	</select>
 </mapper>

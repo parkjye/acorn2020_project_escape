@@ -13,8 +13,8 @@ public class LoginDaoImpl implements LoginDao{
 
 	@Override
 	public boolean isValid(LoginDto dto) {
-		String id=session.selectOne("login.isValid",dto);
-		if(id==null) {
+		String aid=session.selectOne("login.isValid",dto);
+		if(aid==null) {
 			return false;
 		}else {
 			return true;
