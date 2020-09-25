@@ -6,6 +6,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.acorn.escape.review.dao.ReviewDao;
@@ -132,6 +133,16 @@ public class ReviewServiceImpl implements ReviewService{
 
 	@Override
 	public void saveContent(ReviewDto reviewDto) {
+		//비밀번호 암호화
+		String getPwd = reviewDto.getPwd();
+		
+		//비밀번호 받아서 인코딩 하고 dto에 다시 넣어준다.
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		String encodedPwd = encoder.encode(getPwd);
+		
+		reviewDto.setPwd(encodedPwd);
+		
+		//
 		reviewDao.insertReview(reviewDto);
 		
 	}
