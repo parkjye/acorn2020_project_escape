@@ -106,10 +106,25 @@ hr.solid {
 	margin: 0px;
 	margin-bottom: 30px;
 	float: left;
+	height: 550px;
+}
+.thema li{
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	
+	height: 550px;
 }
 .thema .thema__border{
-	border: 2px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items:center;
+	
+	height: 100%;
 	padding: 10px;
+	border: 2px solid black;
 }
 .thema .thema__border img{
 	width: 100%;
@@ -136,7 +151,16 @@ hr.solid {
 	opacity: 1;
 	transition: opacity 0.5s linear;
 }
-
+.thema .thema_image{
+	width: 100%;
+	height: 376px;
+}
+.thema .test{
+	border: 1px solid #f0f;
+}
+.branch__box a{
+	margin: 5px;
+}
 @media (max-width: 575.98px) { }
 
 
