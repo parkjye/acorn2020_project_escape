@@ -31,7 +31,7 @@
 			<input class="form-control" type="password" name="pwd" id="pwd" 
 				ng-model="pwd"
 				ng-required="true"
-				ng-class="{'is-invalid': (myForm.pwd.$invalid) && myForm.pwd.$dirty , 'is-valid': myForm.pwd.$valid}" />
+				ng-class="{'is-invalid': (myForm.pwd.$invalid) && myForm.pwd.$dirty, 'is-valid': myForm.pwd.$valid}" />
 			<div class="invalid-feedback">필수항목 입니다.</div>
 		</div>
 		
