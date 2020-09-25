@@ -1,7 +1,3 @@
-/**
- * 
- */
-
 //오시는길 클릭시 홍대점 정보 default로 전달하는 함수
 const navMapInfoElement = document.getElementById("mapInfo");
 navMapInfoElement.addEventListener("click",function(){
@@ -83,4 +79,5 @@ var infowindow = new kakao.maps.InfoWindow({
 });
 
 infowindow.open(map, marker);
+
 }
