@@ -84,7 +84,7 @@ select {
 			<textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
 		</div>
 		<div class="button">
-			<button class="btn btn-outline-primary" type="submit" >저장</button>
+			<button class="btn btn-outline-primary" type="submit" onclick="submitContents(this);" >저장</button>
 			<button class="btn btn-outline-danger" type="reset">취소</button>
 		</div>
 	</form>
