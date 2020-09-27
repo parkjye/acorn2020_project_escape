@@ -44,7 +44,7 @@
 	<insert id="insert" parameterType="noticeDto">
 		INSERT INTO event
 		(branch,num,writer,title,content,viewCount,regdate)
-		VALUES(#{branch}, board_cafe_seq.NEXTVAL, #{writer}, #{title},
+		VALUES(#{branch}, event_seq.NEXTVAL, #{writer}, #{title},
 			#{content}, #{viewCount}, SYSDATE)
 	</insert>
 	<select id="getData" parameterType="int" resultType="noticeDto">

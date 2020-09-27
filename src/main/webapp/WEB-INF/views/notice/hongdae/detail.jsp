@@ -7,6 +7,8 @@
 <meta charset="UTF-8">
 <title>/views/notice/detail.jsp</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.css" />
+<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
 <style>
 	.contents{
 		width: 100%;
