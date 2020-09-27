@@ -9,7 +9,15 @@
 	width: 364px;
 	height: 300px;
 }
-
+@font-face {
+	font-family: 'HeirofLightBold';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+body{
+    font-family: 'HeirofLightBold';
+}	
 #myCarousel{
     height: 500px;
     margin: 0 auto;
@@ -27,11 +35,7 @@
 } 
 .myBack{
 	background-image: url("/escape/resources/img/tweed.png");
-	width:100%;
-	height:100%;
-	
-}
-.myAlert{
+
 	
 }
 .branchStore{
@@ -63,15 +67,108 @@ hr.solid {
 .mainbg2{background: url('../img/main_img02.jpg') no-repeat 50% 50%; }
 .mainbg3{background: url('../img/main_img03.jpg') no-repeat 50% 50%; }
 
+.circle_padding{
+  	padding: 5px;
+}
+#branch {
+	margin-top: 5%;
+    text-align: center;
+}
+#branch a{
+	padding-left: 3%;
+    padding-right: 3%;
+}
+.avatar{
+	height: 100px;
+	width: 100px;
+	text-align: center;
+}
+      
+.page-change-animation.ng-enter{
+	animation: fadeIn 0.4s ease-out;
+}
+#info{
+	zoom: 1;
+	margin-top:2%;
+	margin-bottom:2%;	
+}
+#branch a { 
+	text-decoration:none 
+} 
 
+/* thema pages */
+.thema{
+	opacity:0;
+	transition : opacity 150ms ease-in;
+}
+.thema ul{
+	list-style: none;
+	margin: 0px;
+	margin-bottom: 30px;
+	float: left;
+	height: 550px;
+}
+.thema li{
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	
+	height: 550px;
+}
+.thema .thema__border{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items:center;
+	
+	height: 100%;
+	padding: 10px;
+	border: 2px solid black;
+}
+.thema .thema__border img{
+	width: 100%;
+}
+.thema 	.thema__border img{
+	width: 100%;
+}
+.thema .wrap__box{
+	position: relative;
+}
+.thema .thema__border__picture .note{
+	position :absolute;
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;
+	top: -0;
+	opacity: 0;
+	background-color: rgb(16, 37, 37);
+	width: 100%;
+	height: 100%;
+}
+.thema .thema__border__picture .note:hover{
+	opacity: 1;
+	transition: opacity 0.5s linear;
+}
+.thema .thema_image{
+	width: 100%;
+	height: 376px;
+}
+.thema .test{
+	border: 1px solid #f0f;
+}
+.branch__box a{
+	margin: 5px;
+}
 @media (max-width: 575.98px) { }
 
 
 @media (max-width: 767.98px) {
-.carousel-caption {
-	  transform: translateY(-50%);
-	  bottom: 0;
-	  top: 50%;
+	.carousel-caption {
+		  transform: translateY(-50%);
+		  bottom: 0;
+		  top: 50%;
 	}		
 }
 
