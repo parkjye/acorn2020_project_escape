@@ -73,12 +73,6 @@ public class HomeController {
 	public String reservation() {
 		return "reservation/reservation";
 	}
-	
-	@RequestMapping("/reservation/reservation2")
-	public String reservation2(HttpServletRequest request) {
-		String bname=request.getParameter("bname");
-		return "reservation/reservation2";
-	}
 
 	@RequestMapping("/intro")
 	public String intro() {

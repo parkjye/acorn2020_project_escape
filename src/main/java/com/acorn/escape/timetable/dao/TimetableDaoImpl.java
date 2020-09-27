@@ -15,7 +15,8 @@ public class TimetableDaoImpl implements TimetableDao {
 	private SqlSession session;
 	@Override
 	public List<TimetableDto> getTable(TimetableDto dto) {
-		return session.selectList("timetable.getTable",dto);
+		List<TimetableDto> list= session.selectList("timetable.getTable",dto);
+		return list;
 	}
 	@Override
 	public List<TimetableDto> getTable2(TimetableDto dto) {
@@ -27,7 +28,31 @@ public class TimetableDaoImpl implements TimetableDao {
 	}
 	@Override
 	public void stateUpdate(ResInfoDto dto) {
+		session.update("timetable.soldoutUpdate",dto);
+		
+	}
+	@Override
+	public void updateTime(TimetableDto dto) {
+		session.update("timetable.updateTime", dto);
+		
+	}
+	@Override
+	public void stateUpdate2(TimetableDto dto) {
 		session.update("timetable.stateUpdate",dto);
+		
+	}
+	@Override
+	public String selectTime() {
+		return session.selectOne("timetable.selectTime");
+	}
+	@Override
+	public void TstatePosible(TimetableDto dto) {
+		session.update("timetable.statePossible",dto);
+		
+	}
+	@Override
+	public void BstatePosible(TimetableDto dto) {
+		session.update("timetable.statePossible2",dto);
 		
 	}
 

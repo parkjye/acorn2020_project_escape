@@ -21,9 +21,43 @@
 		VALUES(#{res_no},#{res_name},#{resdate},#{time},#{bname},#{thema},#{phone},#{cost},#{personal}) 
 	</insert>
 	
-	<update id="stateUpdate" parameterType="resinfoDto">
+	<update id="soldoutUpdate" parameterType="resinfoDto">
 		UPDATE res_state
 		SET state = '매진'
-		WHERE resdate=#{resdate} AND time=#{time} AND thema=#{thema}
+		WHERE bname=#{bname} AND resdate=#{resdate} AND time=#{time} AND thema=#{thema}
 	</update>
+	
+	<update id="statePossible" parameterType="timetableDto">
+		<![CDATA[
+		UPDATE res_state
+		SET state = '예약하기'
+		WHERE bname=#{bname} AND resdate=#{resdate} AND blocktime < TO_CHAR(SYSDATE,'HH24:MI:SS') AND state='예약진행중'  
+		]]>
+	</update>
+	
+	<update id="statePossible2" parameterType="timetableDto">
+		<![CDATA[
+		UPDATE res_state
+		SET state = '예약하기'
+		WHERE bname=#{bname} AND thema=#{thema} AND resdate=#{resdate} AND blocktime < TO_CHAR(SYSDATE,'HH24:MI:SS') AND state='예약진행중' 
+		]]>
+	</update>
+	
+	<update id="stateUpdate" parameterType="resinfoDto">
+		UPDATE res_state
+		SET state = '예약진행중'
+		WHERE bname=#{bname} AND resdate=#{resdate} AND time=#{time} AND thema=#{thema}
+	</update>
+	
+	<update id="updateTime" parameterType="resinfoDto">
+		UPDATE res_state
+		SET blocktime= TO_CHAR(SYSDATE+5/(24*60),'HH24:MI:SS')
+		WHERE bname=#{bname} AND  resdate=#{resdate} AND time=#{time} AND thema=#{thema}
+	</update>
+	
+	<select id="selectTime" resultType="string">
+		SELECT TO_CHAR(SYSDATE,'HH24:MI:SS')
+		FROM dual
+	</select>
+	
 </mapper>

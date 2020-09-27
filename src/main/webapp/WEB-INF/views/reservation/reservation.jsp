@@ -158,6 +158,7 @@
 					<td class="col-3 text-center">{{tmp.time}}</td>
 					<td class="col-6 text-center">{{tmp.thema}}</td>
 					<td data-ng-if="tmp.state=='매진'" class="col-3 text-center" ><a  data-ng-href="#"><span class="badge badge-danger">{{tmp.state}}</span></a></td>
+					<td data-ng-if="tmp.state=='예약진행중'" class="col-3 text-center" ><a  data-ng-href="#"><span class="badge badge-warning">{{tmp.state}}</span></a></td>
 					<td data-ng-if="tmp.state=='예약하기'" class="col-3 text-center"><a  data-ng-href="/escape/reservation/reservation2.do?date={{date}}&&bname={{branches}}&&time={{tmp.time}}&&thema={{tmp.thema}}"><span class="badge badge-info">{{tmp.state}}</span></a></td>
 				</tr>
 			</tbody>
