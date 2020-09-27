@@ -55,9 +55,5 @@
 		WHERE bname=#{bname} AND  resdate=#{resdate} AND time=#{time} AND thema=#{thema}
 	</update>
 	
-	<select id="selectTime" resultType="string">
-		SELECT TO_CHAR(SYSDATE,'HH24:MI:SS')
-		FROM dual
-	</select>
 	
 </mapper>
