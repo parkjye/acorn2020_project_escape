@@ -18,10 +18,12 @@
 		position: relative;
 		left:1035px;
 	}
+	/*
 	#branch{
 		position: relative;
 		left:220px;
-	}
+	}*/
+	
 	.btn{
 		color:Tomato;
 	}
@@ -42,14 +44,17 @@
 	</c:choose>
 	<br/>
 	<div class="container" id="branch">
-		<button class="btn" onclick="location.href='../hongdae/list.do'">홍대점</button>
-		<button class="btn" onclick="location.href='../daegu/list.do'">대구점</button>
-		<button class="btn" onclick="location.href='../incheon/list.do'">인천구월점</button>
-		<button class="btn" onclick="location.href='../jeonju/list.do'">전주점</button>
-		<button class="btn" onclick="location.href='../jamsil/list.do'">잠실점</button>
-		<button class="btn" onclick="location.href='../daejeon/list.do'">대전두산점</button>
-		<button class="btn" onclick="location.href='../cheonho/list.do'">천호점</button>
-		<button class="btn" onclick="location.href='../suyu/list.do'">수유점</button>
+	
+		<div class="row d-flex justify-content-end">
+			<button class="btn" onclick="location.href='../hongdae/list.do'">홍대점</button>
+			<button class="btn" onclick="location.href='../daegu/list.do'">대구점</button>
+			<button class="btn" onclick="location.href='../incheon/list.do'">인천구월점</button>
+			<button class="btn" onclick="location.href='../jeonju/list.do'">전주점</button>
+			<button class="btn" onclick="location.href='../jamsil/list.do'">잠실점</button>
+			<button class="btn" onclick="location.href='../daejeon/list.do'">대전두산점</button>
+			<button class="btn" onclick="location.href='../cheonho/list.do'">천호점</button>
+			<button class="btn" onclick="location.href='../suyu/list.do'">수유점</button>
+		</div>
 	</div>
 	<br/><br/>
 	<table class="table table-sm table-hover table-secondary">
