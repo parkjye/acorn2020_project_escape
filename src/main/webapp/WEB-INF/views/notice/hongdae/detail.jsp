@@ -7,43 +7,12 @@
 <meta charset="UTF-8">
 <title>/views/notice/detail.jsp</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css?v=<%=System.currentTimeMillis() %>" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"/></script>
 <script src="${pageContext.request.contextPath}/resources/js/jquery-3.5.1.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/jquery.form.min.js"></script>
-<style>
-	.contents{
-		width: 100%;
-		/*border: 1px dotted #cecece;*/
-		padding-top: 50px;
-	}
-	hr.solid {
-	    border-top: 1px solid #ffffff;
-	}
-/*
-
-	.contents img{
-		max-width: 100%;
-	}
-	.loader{
-		position: fixed; 
-		width: 100%;
-		left: 0;
-		bottom: 0;
-		text-align: center; 
-		z-index: 1000;
-		display: none; 
-	}
-	.btnList{
-		position: relative;
-		left:1020px;
-	}
-	.btnad{
-		position: relative;
-		left:988px;
-	}
-	*/
-</style>
 </head>
 <body>
 <jsp:include page="../../templates/nav.jsp"></jsp:include>
@@ -98,21 +67,14 @@
 		</c:if>
 	</div>
 </div>
-
-<!-- 
-<div class="loader">
-	<img src="${pageContext.request.contextPath }/resources/images/ajax-loader.gif"/>
-</div>
- -->
  
 <script>
-	function deleteConfirm(){
-		var isDelete=confirm("이 글을 삭제 하시겠습니까?");
-		if(isDelete){
-			location.href="delete.do?num=${dto.num}";
-		}
+function deleteConfirm(){
+	var isDelete=confirm("이 글을 삭제 하시겠습니까?");
+	if(isDelete){
+		location.href="delete.do?num=${dto.num}";
 	}
-
+}
 </script>
 <jsp:include page="../../templates/footer.jsp"></jsp:include>
 </body>

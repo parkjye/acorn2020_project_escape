@@ -10,6 +10,8 @@ CREATE TABLE event(
 );
 
 create sequence event_seq;
+create sequence event_seq;
+create sequence board_cafe_seq;
 
 
 --예약 정보 생성
