@@ -4,6 +4,8 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -66,9 +68,23 @@ public class HomeController {
 	public String suyu() {
 		return "mapinfo/include/suyu";
 	}
+	
+	@RequestMapping("/reservation/reservation")
+	public String reservation() {
+		return "reservation/reservation";
+	}
+	
+	@RequestMapping("/reservation/reservation2")
+	public String reservation2(HttpServletRequest request) {
+		String bname=request.getParameter("bname");
+		return "reservation/reservation2";
+	}
 
 	@RequestMapping("/intro")
 	public String intro() {
 		return "intro";
 	}
+	
+	
+	
 }

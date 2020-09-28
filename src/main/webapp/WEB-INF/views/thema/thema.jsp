@@ -47,25 +47,7 @@
 	const box =document.querySelectorAll(".preview"); 
 	const themaele = document.querySelector(".thema");
 	const branchBox = document.querySelector(".branch__box");
-	const getCookieValue = (key) => {
-		  let cookieKey = key + "="; 
-		  let result = "";
-		  const cookieArr = document.cookie.split(";");
-		  
-		  for(let i = 0; i < cookieArr.length; i++) {
-		    if(cookieArr[i][0] === " ") {
-		      cookieArr[i] = cookieArr[i].substring(1);
-		    }
-		    
-		    if(cookieArr[i].indexOf(cookieKey) === 0) {
-		      result = cookieArr[i].slice(cookieKey.length, cookieArr[i].length);
-		      return result;
-		    }
-		  }
-		  return result;
-	}
-	let branch = getCookieValue("branch");
-	
+	let branch = localStorage.getItem("branch");
 	for(let i=0; i<box.length; i++)
 	{
 		box[i].addEventListener("click",function(){
@@ -77,12 +59,10 @@
 				}
 			}
 			this.classList.add("active");
-			//
 			branch = this.dataset.branch;
-			document.cookie = `branch=\${branch};path=/escape`;
-			
+			localStorage.setItem("branch",branch);
 			themaele.style.opacity = 0;
-			render(getCookieValue("branch"));
+			render(branch);
 			setTimeout(() => {
 				themaele.style.opacity = 1;
 			}, 300);
@@ -170,7 +150,7 @@
 	//최초실행
 	{
 		themaele.style.opacity = 0;
-		render(getCookieValue("branch"));
+		render(branch);
 		setTimeout(() => {
 			themaele.style.opacity = 1;
 		}, 250);

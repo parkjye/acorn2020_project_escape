@@ -8,11 +8,13 @@
 			alias="noticeDto"/>
 		<typeAlias type="com.acorn.escape.login.dto.LoginDto" 
 			alias="loginDto"/>
+		<typeAlias type="com.acorn.escape.timetable.dto.TimetableDto" alias="timetableDto"/>
+		<typeAlias type="com.acorn.escape.timetable.dto.ResInfoDto" alias="resinfoDto"/>
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="com/acorn/escape/mybatis/LoginMapper.xml"/>
 		<mapper resource="com/acorn/escape/mybatis/NoticeMapper.xml"/>
-	</mappers>
+		<mapper resource="com/acorn/escape/mybatis/TimetableMapper.xml"/>
+	</mappers>		
 </configuration>
-

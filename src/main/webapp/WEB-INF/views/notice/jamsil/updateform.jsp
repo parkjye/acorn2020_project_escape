@@ -30,7 +30,7 @@
 <jsp:include page="../../templates/nav.jsp"></jsp:include>
 <div class="container">
 	<h3>공지/이벤트 수정</h3>
-	<form action="update.do" method="post">
+	<form action="update.do" method="post" id="notice">
 		<input type="hidden" name="num" value="${dto.num }"/>
 		<div class="form-group">
 			<label for="num">글번호</label>
@@ -46,7 +46,7 @@
 			<textarea class="form-control" name="content" id="content">${dto.content }</textarea>
 		</div>
 		<div class="btnad">
-			<button class="btn btn-outline-primary" type="submit" onclick="submitContents(this);">수정확인</button>
+			<button class="btn btn-outline-primary" type="submit" >수정확인</button>
 			<button class="btn btn-outline-warning" type="reset" onclick="location.href='detail.do?num=${dto.num }'">취소</button>
 		</div>	
 	</form>
@@ -104,6 +104,18 @@
 		var nFontSize = 24;
 		oEditors.getById["content"].setDefaultFont(sDefaultFont, nFontSize);
 	}
+</script>
+<script src="${pageContext.request.contextPath }/resources/js/jquery-3.5.1.js"></script>
+<script>
+	$("#notice").on("submit", function(){	
+		var inputTitle=$("#title").val();
+		if(inputTitle==""){
+			alert("제목를(을) 입력하세요");
+			$("#title");
+			return false; 
+		}
+	});
+
 </script>
 <jsp:include page="../../templates/footer.jsp"></jsp:include>
 </body>
