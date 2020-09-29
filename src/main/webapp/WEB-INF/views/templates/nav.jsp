@@ -28,7 +28,7 @@
         <a class="nav-link" id="mapInfo" href="${pageContext.request.contextPath}/mapinfo/mapinfo.do">오시는길</a>
       </li>            
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="#">가맹문의</a>
+        <a class="nav-link" href="#">후기게시판</a>
       </li>      
     </ul>
   </div>
