@@ -46,7 +46,7 @@
 			<textarea class="form-control" name="content" id="content">${dto.content }</textarea>
 		</div>
 		<div class="btnad">
-			<button class="btn btn-outline-primary" type="submit" >수정확인</button>
+			<button class="btn btn-outline-primary" type="submit"  onclick="submitContents(this);">수정확인</button>
 			<button class="btn btn-outline-warning" type="reset" onclick="location.href='detail.do?num=${dto.num }'">취소</button>
 		</div>	
 	</form>

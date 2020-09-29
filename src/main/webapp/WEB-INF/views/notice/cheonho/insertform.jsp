@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
 <title>/views/notice/insertform.jsp</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.css" />
+<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
 <style>
 	#content{
 		display: none;
@@ -57,19 +59,6 @@ select {
 <div class="container">
 	<br/>
 	<h3>공지/이벤트 작성</h3>
-<<<<<<< HEAD
-	<form action="insert.do" method="post">
-		<div class="form-group">
-			<label for="branch">지점</label>
-			<!-- <input class="form-control" type="text" name="branch", id="branch"/> -->
-			<select name="branch" id="branch">
-				<option value="천호점">천호점</option>
-				<option value="수유점">수유점</option>
-				<option value="인천구월점">인천구월점</option>
-				<option value="홍대점">홍대점</option>
-			</select>
-		</div>
-=======
 	<form action="insert.do" method="post" id="notice">
 		<label for="condition">지점 선택</label>
 		</br>
@@ -83,7 +72,6 @@ select {
 			<option value="전주점">전주점</option>
 			<option value="수유점">수유점</option>
 		</select>
->>>>>>> origin/minki-noticepage1
 		<div class="form-group">
 		</br>
 			<label for="writer">작성자</label>
@@ -98,7 +86,7 @@ select {
 			<textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
 		</div>
 		<div class="button">
-			<button class="btn btn-outline-primary" type="submit" >저장</button>
+			<button class="btn btn-outline-primary" type="submit" onclick="submitContents(this);" >저장</button>
 			<button class="btn btn-outline-danger" type="reset">취소</button>
 		</div>
 	</form>

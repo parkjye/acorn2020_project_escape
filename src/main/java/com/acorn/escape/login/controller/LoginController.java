@@ -30,6 +30,7 @@ public class LoginController {
 		if(aid != null) {
 			mView.setViewName("home");
 			return mView;
+			//return "redirect:/home.do";
 		}else { 
 			mView.setViewName("loginFail_redirect");
 			return mView;

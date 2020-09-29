@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
 <title>/views/notice/insertform.jsp</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.css" />
+<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
 <style>
 	#content{
 		display: none;
@@ -84,7 +86,7 @@ select {
 			<textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
 		</div>
 		<div class="button">
-			<button class="btn btn-outline-primary" type="submit" >저장</button>
+			<button class="btn btn-outline-primary" type="submit"onclick="submitContents(this);" >저장</button>
 			<button class="btn btn-outline-danger" type="reset">취소</button>
 		</div>
 	</form>
