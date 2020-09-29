@@ -10,7 +10,7 @@ public interface ReviewService {
 	
 	public void saveContent(ReviewDto reviewDto);
 	
-	public void updateContent(ReviewDto reviewDto);
-	public void deleteContent(int num, HttpServletRequest request);
+	public void updateContent(HttpServletRequest request, ReviewDto reviewDto);
+	public void deleteContent(HttpServletRequest request, ReviewDto reviewDto);
 
 }

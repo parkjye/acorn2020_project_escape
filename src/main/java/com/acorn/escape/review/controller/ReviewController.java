@@ -5,8 +5,10 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.acorn.escape.review.dto.ReviewDto;
@@ -53,8 +55,9 @@ public class ReviewController {
 	
 	//삭제
 	@RequestMapping("/review/private/delete")
-	public ModelAndView delete(int num, HttpServletRequest request, ModelAndView mView) {
-		reviewService.deleteContent(num, request);
+	public ModelAndView delete(HttpServletRequest request, ModelAndView mView, ReviewDto reviewDto) {
+		
+		reviewService.deleteContent(request, reviewDto);
 		mView.setViewName("redirect:/review/list.do");
 		
 		return mView;
@@ -70,8 +73,8 @@ public class ReviewController {
 	}
 	
 	@RequestMapping(value="/review/private/update", method=RequestMethod.POST)
-	public ModelAndView update(ReviewDto reDto, ModelAndView mView) {
-		reviewService.updateContent(reDto);
+	public ModelAndView update(HttpServletRequest request, ReviewDto reDto, ModelAndView mView) {
+		reviewService.updateContent(request, reDto);
 		mView.setViewName("review/private/update");
 		
 		return mView;
