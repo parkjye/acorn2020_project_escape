@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="confirm">
+	<select id="getList" parameterType="confirmDto"
+		resultType="confirmDto">
+		select res_no, res_name, resdate, time, bname, thema, phone, cost, personal
+		from res_info
+		where res_name=#{res_name} and phone=#{phone} and res_no=#{res_no}
+	</select>
+	<delete id="delete" parameterType="confirmDto">
+		delete from res_info
+		where res_name=#{res_name} and phone=#{phone} and res_no=#{res_no}
+	</delete>	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
