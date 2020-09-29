@@ -32,14 +32,14 @@
 	</c:choose>
 	<!-- 지점 -->
 	<div class="row d-flex justify-content-end mb-2">
-		<button class="btn" onclick="location.href='../hongdae/list.do'">홍대점</button>
-		<button class="btn" onclick="location.href='../daegu/list.do'">대구점</button>
-		<button class="btn" onclick="location.href='../incheon/list.do'">인천구월점</button>
-		<button class="btn" onclick="location.href='../jeonju/list.do'">전주점</button>
-		<button class="btn" onclick="location.href='../jamsil/list.do'">잠실점</button>
-		<button class="btn" onclick="location.href='../daejeon/list.do'">대전두산점</button>
-		<button class="btn" onclick="location.href='../cheonho/list.do'">천호점</button>
-		<button class="btn" onclick="location.href='../suyu/list.do'">수유점</button>
+		<button class="btn btn-link" onclick="location.href='../hongdae/list.do'">홍대점</button>
+		<button class="btn btn-link" onclick="location.href='../daegu/list.do'">대구점</button>
+		<button class="btn btn-link" onclick="location.href='../incheon/list.do'">인천구월점</button>
+		<button class="btn btn-link" onclick="location.href='../jeonju/list.do'">전주점</button>
+		<button class="btn btn-link" onclick="location.href='../jamsil/list.do'">잠실점</button>
+		<button class="btn btn-link" onclick="location.href='../daejeon/list.do'">대전두산점</button>
+		<button class="btn btn-link" onclick="location.href='../cheonho/list.do'">천호점</button>
+		<button class="btn btn-link" onclick="location.href='../suyu/list.do'">수유점</button>
 	</div>
 
 	<div class="row d-flex justify-content-between align-items-center mb-2">
