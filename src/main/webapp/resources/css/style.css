@@ -155,6 +155,9 @@ hr.solid {
 .thema .test{
 	border: 1px solid #f0f;
 }
+.note span{
+	font-size : 0.7vw;
+}
 .branch__box a{
 	margin: 5px;
 }
