@@ -26,8 +26,14 @@ public class ConfirmDaoImpl implements ConfirmDao{
 		session.delete("confirm.delete", dto);
 		
 	}
-	public String getLi(ConfirmDto dto) {
-		return session.selectOne("confirm.getli", dto);
+	public ConfirmDto getData(ConfirmDto dto) {
+		return session.selectOne("confirm.getData", dto);
+	}
+
+	@Override
+	public void update(ConfirmDto dto) {
+		// TODO Auto-generated method stub
+		session.update("confirm.update",dto);
 	}
 
 

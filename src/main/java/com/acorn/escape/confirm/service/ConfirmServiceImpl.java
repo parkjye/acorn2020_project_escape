@@ -36,10 +36,8 @@ public class ConfirmServiceImpl implements ConfirmService {
 	@Override
 	public void deleteConfirm(ConfirmDto dto) {
 		List<ConfirmDto> list = confirmDao.getList(dto);
+		confirmDao.update(confirmDao.getData(dto));
 		confirmDao.delete(dto);
-		
-		
-		
 	}
 
 

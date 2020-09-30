@@ -7,10 +7,23 @@
 		from res_info
 		where res_name=#{res_name} and phone=#{phone} and res_no=#{res_no}
 	</select>
+	<select id="getData" parameterType="confirmDto"
+		resultType="confirmDto">
+		select res_no, res_name, resdate, time, bname, thema, phone, cost, personal
+		from res_info
+		where res_name=#{res_name} and phone=#{phone} and res_no=#{res_no}
+	</select>	
 	<delete id="delete" parameterType="confirmDto">
 		delete from res_info
 		where res_name=#{res_name} and phone=#{phone} and res_no=#{res_no}
 	</delete>	
+	
+	<update id="update" parameterType="confirmDto">
+		UPDATE res_state
+		SET state = '예약하기'
+		WHERE resdate=#{resdate} AND time=#{time} AND thema=#{thema} AND bname=#{bname}
+	</update>
+	
 </mapper>
 
 
