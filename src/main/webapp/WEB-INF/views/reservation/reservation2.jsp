@@ -7,8 +7,9 @@
 <meta charset="UTF-8">
 <title>예약하기</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css?v=<%=System.currentTimeMillis() %>" />
-<script src="../resources/js/angular.min.js"></script>
-<script src="../resources/js/jquery-3.5.1.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
+<script src="${pageContext.request.contextPath}/resources/js/angular.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-3.5.1.js"></script>
 <script>
 	var App=angular.module("App", []);
 	App.controller("resCtrl", function($scope, $http){
