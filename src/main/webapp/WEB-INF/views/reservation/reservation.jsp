@@ -129,13 +129,13 @@
 		</div>
 		<div class="col-4">
 			<label for="">지점선택</label>
-			<select data-ng-model="branches" class="form-control">
+			<select id="selectBranch" data-ng-model="branches" class="form-control">
 				<option data-ng-repeat="x in branch" value="{{x.id}}">{{x.name}}</option>
 			</select>
 		</div>
 		<div class="col-4">
 			<label for="dateselect">테마</label>
-			<select data-ng-model="thema" data-ng-change="change()" class="form-control">
+			<select  data-ng-model="thema" data-ng-change="change()" class="form-control">
 				<option data-ng-if="branches == '홍대점'" data-ng-repeat="x in themah" value="{{x.id}}">{{x.name}}</option>
 				<option data-ng-if="branches == '대구점'" data-ng-repeat="x in themad" value="{{x.id}}">{{x.name}}</option>
 				<option data-ng-if="branches == '인천구월점'" data-ng-repeat="x in themai" value="{{x.id}}">{{x.name}}</option>
@@ -168,5 +168,14 @@
 	</div>
 </div>
 <jsp:include page="../templates/footer.jsp"></jsp:include>
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+	let branch = localStorage.getItem("branch");
+	const selectElement = document.getElementById("selectBranch");
+	selectElement.value = branch;
+});
+
+
+</script>
 </body>
 </html>
