@@ -113,7 +113,7 @@
 				<div class="col-lg-2 col-md-4 col-sm-5 myBox d-flex flex-column justify-content-center align-items-center  my-4 mx-2  branchStore">
 					<h5>대전둔산점</h5>
 					<hr class="w-50 solid">
-					<a class="branch_reserve" href="${pageContext.request.contextPath}/reservation/reservation.do?doosan" data-branch="대전두산점">예약하기</a>
+					<a class="branch_reserve" href="${pageContext.request.contextPath}/reservation/reservation.do?doosan" data-branch="대전둔산점">예약하기</a>
 					<a class="branch_thema" href="${pageContext.request.contextPath}/thema/thema.do"  data-branch="daejeon">테마소개</a>
 					<a href="${pageContext.request.contextPath}/mapinfo/mapinfo.do#/daejeon">오시는길</a>				
 				</div>
