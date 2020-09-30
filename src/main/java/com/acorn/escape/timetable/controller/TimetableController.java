@@ -33,5 +33,10 @@ public class TimetableController {
 		return map;
 	}
 	
+	@RequestMapping("/reservation/reservation2")
+	public String reservation2(HttpServletRequest request) {
+		timeService.updateState(request);
+		return "reservation/reservation2";
+	}
 
 }
