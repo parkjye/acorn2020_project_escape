@@ -6,6 +6,7 @@ public class TimetableDto {
 	private String time;
 	private String thema;
 	private String state;
+	private String blocktime;
 	public String getBname() {
 		return bname;
 	}
@@ -36,6 +37,13 @@ public class TimetableDto {
 	public void setState(String state) {
 		this.state = state;
 	}
+	public String getBlocktime() {
+		return blocktime;
+	}
+	public void setBlocktime(String blocktime) {
+		this.blocktime = blocktime;
+	}
+	
 	
 	
 }

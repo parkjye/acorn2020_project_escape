@@ -16,7 +16,7 @@
 		$scope.date=new Date().toISOString().split("T")[0]; 
 		$scope.branch = [{id:"홍대점",name:"홍대점"},{id:"대구점",name:"대구점"},{id:"인천구월점",name:"인천구월점"},{id:"전주점",name:"전주점"},{id:"잠실점",name:"잠실점"},{id:"대전두산점",name:"대전두산점"},{id:"천호점",name:"천호점"},{id:"수유점",name:"수유점"}];
 		$scope.themah = [{id:"total",name:"전체테마"},{id:"피라미드",name:"파라미드의 비밀 ★★★☆☆"},{id:"헨젤과 그레텔",name:"헨젤과 그레텔 ★★★★☆"},{id:"Towering",name:"Towering ★★★★☆"},{id:"Gestapo",name:"Gestapo ★★★★☆"},{id:"Monkey House",name:"Monkey House ★★★☆☆"},{id:"장기밀매",name:"장기밀매 ★★★★★"},{id:"Deliver",name:"Deliver ★★★★☆"},{id:"Romeo point",name:"Romeo Point ★★★★☆"}];
-		$scope.themad = [{id:"total",name:"전체테마"},{id:"장기밀매",name:"장기밀매 ★★★★★"},{id:"Deliver",name:"Deliver ★★★★☆"},{id:"Monkey House",name:"Monkey House ★★★☆☆"},{id:"Gestapo",name:"Gestapo ★★★★☆"},{id:"헨젤과 그레텔",name:"Monkey House ★★★★☆"},{id:"알포인트",name:"알포인트 ★★★★☆"},{id:"피라미드",name:"피라미드 ★★★☆☆"},{id:"폼페이최후의날",name:"폼페이최후의날 ★★★★☆"},{id:"집행",name:"집행 ★★★★☆"},{id:"카타콤",name:"카타콤 ★★★★☆"}];
+		$scope.themad = [{id:"total",name:"전체테마"},{id:"장기밀매",name:"장기밀매 ★★★★★"},{id:"Deliver",name:"Deliver ★★★★☆"},{id:"Monkey House",name:"Monkey House ★★★☆☆"},{id:"Gestapo",name:"Gestapo ★★★★☆"},{id:"헨젤과 그레텔",name:"헨젤과 그레텔 ★★★★☆"},{id:"알포인트",name:"알포인트 ★★★★☆"},{id:"피라미드",name:"피라미드 ★★★☆☆"},{id:"폼페이최후의날",name:"폼페이최후의날 ★★★★☆"},{id:"집행",name:"집행 ★★★★☆"},{id:"카타콤",name:"카타콤 ★★★★☆"}];
 		$scope.themai = [{id:"total",name:"전체테마"},{id:"타이타닉",name:"타이타닉 ★★★★☆"},{id:"신데렐라",name:"신데렐라 ★★★★☆"},{id:"장기밀매",name:"장기밀매 ★★★★★"},{id:"Towering",name:"Towering ★★★★☆"},{id:"집착",name:"집착 ★★★★☆"}];
 		$scope.themaj = [{id:"total",name:"전체테마"},{id:"피라미드",name:"파라미드의 비밀 ★★★☆☆"},{id:"피고인",name:"피고인 ★★★★☆"},{id:"좀비스쿨",name:"좀비스쿨 ★★★★★"},{id:"헨젤과 그레텔",name:"헨젤과 그레텔 ★★★★☆"},{id:"제시의시크릿",name:"제시의시크릿 ★★★★☆"},{id:"Deliver",name:"Deliver ★★★★☆"},{id:"신데렐라",name:"신데렐라 ★★★★☆"},{id:"집착",name:"집착 ★★★★☆"}];
 		$scope.themaja = [{id:"total",name:"전체테마"},{id:"Romeo Point",name:"Romeo Point ★★★★☆"},{id:"신데렐라",name:"신데렐라 ★★★☆☆"},{id:"집착",name:"집착 ★★★★☆"},{id:"마션",name:"마션 ★★★★★"},{id:"타이타닉",name:"타이타닉 ★★★★☆"},{id:"카타콤",name:"카타콤 ★★★★★"}];
@@ -158,6 +158,7 @@
 					<td class="col-3 text-center">{{tmp.time}}</td>
 					<td class="col-6 text-center">{{tmp.thema}}</td>
 					<td data-ng-if="tmp.state=='매진'" class="col-3 text-center" ><a  data-ng-href="#"><span class="badge badge-danger">{{tmp.state}}</span></a></td>
+					<td data-ng-if="tmp.state=='예약진행중'" class="col-3 text-center" ><a  data-ng-href="#"><span class="badge badge-warning">{{tmp.state}}</span></a></td>
 					<td data-ng-if="tmp.state=='예약하기'" class="col-3 text-center"><a  data-ng-href="/escape/reservation/reservation2.do?date={{date}}&&bname={{branches}}&&time={{tmp.time}}&&thema={{tmp.thema}}"><span class="badge badge-info">{{tmp.state}}</span></a></td>
 				</tr>
 			</tbody>

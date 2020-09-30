@@ -28,12 +28,14 @@ public class TimetableServiceImpl implements TimetableService {
 		if(name != null && thema.equals("total")) {
 			dto.setResdate(date);
 			dto.setBname(name);
+			timeDao.TstatePosible(dto);
 			List<TimetableDto> list=timeDao.getTable(dto);
 			map.put("list",list);
 		}else {
 			dto.setResdate(date);
 			dto.setBname(name);
 			dto.setThema(thema);
+			timeDao.BstatePosible(dto);
 			List<TimetableDto> list=timeDao.getTable2(dto);
 			map.put("list",list);
 		}
@@ -54,6 +56,22 @@ public class TimetableServiceImpl implements TimetableService {
 		ResInfoDto dto=new ResInfoDto(res_no, res_name, resdate,time, bname, thema, phone, cost, personal);
 		timeDao.resInsert(dto);
 		timeDao.stateUpdate(dto);
+	}
+
+	@Override
+	public void updateState(HttpServletRequest request) {
+		String resdate=request.getParameter("date");
+		String bname=request.getParameter("bname");
+		String time=request.getParameter("time");
+		String thema=request.getParameter("thema");
+		TimetableDto dto=new TimetableDto();
+		dto.setResdate(resdate);
+		dto.setBname(bname);
+		dto.setTime(time);
+		dto.setThema(thema);
+		timeDao.updateTime(dto);
+		timeDao.stateUpdate2(dto);
+		
 	}
 
 	
