@@ -38,5 +38,8 @@ public class TimetableController {
 		timeService.updateState(request);
 		return "reservation/reservation2";
 	}
-
+	@RequestMapping("/reservation/res_detail")
+	public String res_detail() {
+		return "reservation/res_detail";
+	}
 }
