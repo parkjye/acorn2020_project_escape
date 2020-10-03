@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="admin">
+
+	<select id="getlist" parameterType="adminDto"
+		resultType="adminDto">
+		select resdate, time, bname, thema, state
+		from res_state
+		where bname=#{bname} and resdate=#{resdate}
+		ORDER BY time ASC
+	</select>
+	
+	<insert id="setlist" parameterType="adminDto">
+		INSERT INTO res_state
+		(bname,resdate,time,thema,state)
+		VALUES(#{bname}, #{resdate}, #{time}, #{thema}, #{state})
+	</insert>
+	
+	<select id="selectOne" parameterType="adminDto" resultType="adminDto">
+		select r.time,r.thema,info.res_name
+		from res_state r
+		inner join res_info info on r.bname=info.bname 
+		where r.bname=#{bname} and r.resdate=#{resdate}
+		ORDER BY time ASC
+	</select>
+</mapper>

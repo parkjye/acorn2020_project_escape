@@ -124,7 +124,7 @@
 	<div class="form-group row">
 		<div class="col-4">
 			<label for="dateselect">날짜선택</label>
-			<input type="date" data-ng-model="date" data-ng-change="change()" class="form-control" min="2020-09-20" max="2021-05-05" />
+			<input id="selectDate" type="date" data-ng-model="date" data-ng-change="change()" class="form-control" min="2020-09-20" />
 		</div>
 		<div class="col-4">
 			<label for="">지점선택</label>
@@ -174,6 +174,28 @@ window.addEventListener('DOMContentLoaded', function () {
 	selectElement.value = branch;
 });
 
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+2; //January is 0!
+//오늘로부터 2개월뒤까지만 달력에 표시함 
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+    if(mm>12){
+    	mm = mm%12;
+    	yyyy+=1;
+        if(mm<10){
+            mm='0'+mm
+        }
+    }
+
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("selectDate").setAttribute("max", today);
 
 </script>
 </body>
