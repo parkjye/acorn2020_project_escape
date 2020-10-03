@@ -55,5 +55,9 @@ public class TimetableDaoImpl implements TimetableDao {
 		session.update("timetable.statePossible2",dto);
 		
 	}
+	@Override
+	public List<ResInfoDto> getResinfo(ResInfoDto dto) {
+		return session.selectList("timetable.getResinfo",dto);
+	}
 
 }

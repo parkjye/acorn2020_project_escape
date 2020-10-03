@@ -15,5 +15,6 @@ public interface TimetableDao {
 	public void resInsert(ResInfoDto dto);
 	public void stateUpdate(ResInfoDto dto);
 	public String selectTime();
+	public List<ResInfoDto> getResinfo(ResInfoDto dto);
 
 }

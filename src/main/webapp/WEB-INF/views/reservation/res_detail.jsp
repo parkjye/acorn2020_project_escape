@@ -1,15 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%
-	String bname=request.getParameter("bname");
-	String thema=request.getParameter("thema");
-	String personal=request.getParameter("personal");
-	String cost=request.getParameter("cost");
-	String resname=request.getParameter("resname");
-	String phone=request.getParameter("phone");
-	String resnum=phone.substring(7);
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,23 +26,24 @@
 <div class="container">
 	<h1>예약완료</h1>
 	<hr style="border: 2px solid gray;"/>
+	<c:forEach items="${list }" var="res">
 	<div class="table1">
 		<table class="table">
 				<tr>
 					<th>지점</th>
-					<td><%=bname %></td>
+					<td>${res.bname }</td>
 				</tr>
 				<tr>
 					<th>테마</th>
-					<td><%=thema %></td>
+					<td>${res.thema }</td>
 				</tr>
 				<tr>
 					<th>인원</th>
-					<td><%=personal %></td>
+					<td>${res.personal }</td>
 				</tr>
 				<tr>
 					<th>참가요금</th>
-					<td><%=cost %></td>
+					<td>${res.cost }</td>
 				</tr>
 		</table>
 	</div>
@@ -59,21 +51,22 @@
 		<table class="table">
 				<tr>
 					<th>예약자</th>
-					<td><%=resname %></td>
+					<td>${res.res_name }</td>
 				</tr>
 				<tr>
 					<th>연락처</th>
-					<td><%=phone %></td>
+					<td>${res.phone }</td>
 				</tr>
 				<tr>
 					<th>예약확인번호</th>
 					<td>
-						<%=resnum %>
+						${res.res_no }
 						<span style="margin-left: 5%; color: red;" >(예약확인 및 취소 때 필요한 정보 입니다.)</span>
 					</td>
 				</tr>	
 		</table>
 	</div>
+	</c:forEach>
 	<a href="../home.do">메인 페이지로 돌아가기</a>
 </div>
 <jsp:include page="../templates/footer.jsp"></jsp:include>
