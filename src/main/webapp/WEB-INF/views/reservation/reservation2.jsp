@@ -26,7 +26,7 @@
 			resname=$scope.resname;
 			phone=$scope.phone;
 			alert("예약되었습니다.");
-			location.href="/escape/reservation/res_detail.do?bname="+$scope.bname+"&&thema="+$scope.thema+"&&personal="+$scope.personal+"&&cost="+$scope.cost+"&&resname="+$scope.resname+"&&phone="+$scope.phone;
+			location.href="/escape/reservation/res_detail.do?bname="+$scope.bname+"&&thema="+$scope.thema+"&&resdate="+$scope.date+"&&time="+$scope.time;
 		});
 		};
 		

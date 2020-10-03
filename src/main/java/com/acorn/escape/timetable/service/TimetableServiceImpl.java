@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.acorn.escape.timetable.dao.TimetableDao;
 import com.acorn.escape.timetable.dto.ResInfoDto;
@@ -52,7 +53,15 @@ public class TimetableServiceImpl implements TimetableService {
 		String phone=request.getParameter("phone");
 		String cost=request.getParameter("cost");
 		String personal=request.getParameter("personal");
-		ResInfoDto dto=new ResInfoDto(res_name, resdate,time, bname, thema, phone, cost, personal);
+		ResInfoDto dto=new ResInfoDto();
+		dto.setRes_name(res_name);
+		dto.setResdate(resdate);
+		dto.setTime(time);
+		dto.setBname(bname);
+		dto.setThema(thema);
+		dto.setPhone(phone);
+		dto.setCost(cost);
+		dto.setPersonal(personal);
 		timeDao.resInsert(dto);
 		timeDao.stateUpdate(dto);
 	}
@@ -70,6 +79,28 @@ public class TimetableServiceImpl implements TimetableService {
 		dto.setThema(thema);
 		timeDao.updateTime(dto);
 		timeDao.stateUpdate2(dto);
+		
+	}
+
+	@Override
+	public void getResno(HttpServletRequest request, ModelAndView mView) {
+		String resdate=request.getParameter("resdate");
+		String bname=request.getParameter("bname");
+		String time=request.getParameter("time");
+		String thema=request.getParameter("thema");
+		System.out.println(resdate);
+		System.out.println(bname);
+		System.out.println(time);
+		System.out.println(thema);
+		ResInfoDto dto=new ResInfoDto();
+		dto.setResdate(resdate);
+		dto.setBname(bname);
+		dto.setTime(time);
+		dto.setThema(thema);
+		List<ResInfoDto> list=timeDao.getResinfo(dto);
+		System.out.println(list.get(0).getres_no());
+		mView.addObject("list", list);
+
 		
 	}
 

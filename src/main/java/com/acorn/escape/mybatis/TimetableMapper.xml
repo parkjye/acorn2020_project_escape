@@ -56,5 +56,10 @@
 		WHERE bname=#{bname} AND  resdate=#{resdate} AND time=#{time} AND thema=#{thema}
 	</update>
 	
+	<select id="getResinfo" parameterType="resinfoDto" resultType="resinfoDto">
+		SELECT *
+		FROM res_info
+		WHERE bname=#{bname} AND  resdate=#{resdate} AND time=#{time} AND thema=#{thema}
+	</select>
 	
 </mapper>

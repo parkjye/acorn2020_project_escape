@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.acorn.escape.timetable.service.TimetableService;
 
@@ -40,8 +41,10 @@ public class TimetableController {
 	}
 
 	@RequestMapping("/reservation/res_detail")
-	public String res_detail() {
-		return "reservation/res_detail";
+	public ModelAndView res_detail(HttpServletRequest request,ModelAndView mView) {
+		timeService.getResno(request, mView);
+		mView.setViewName("reservation/res_detail");
+		return mView;
 	}
 
 }
