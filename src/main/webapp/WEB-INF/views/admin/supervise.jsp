@@ -45,6 +45,14 @@ ul.tabs li.current{
 <jsp:include page="../templates/nav.jsp"></jsp:include>
 	<!-- 시작시 기본 날짜 설정은 value를 이용 -->
 	<div class="container">
+	<c:choose>
+		<c:when test="${empty aid }">
+			<a href="${pageContext.request.contextPath}/login/login_form.do">로그인 폼</a>
+		</c:when>
+		<c:otherwise>			
+			<a style="margin-top: 1.5%; margin-bottom: 1.5%;" class="btn btn-outline-warning btn-sm" href="${pageContext.request.contextPath }/login/logout.do">로그아웃</a>
+		</c:otherwise>
+	</c:choose>
 	<ul class="tabs">
 		<li class="tab-link current" data-tab="tab-1">일정 복사</li>
 		<li class="tab-link" data-tab="tab-2">일정 확인</li>
