@@ -159,7 +159,7 @@
 		                <div class="text-center title">\${themaes[item].title}</div>
 		                <div class="text-center">\${themaes[item].type}</div>
 		                <div class="text-center">
-		                    <a class="preview btn btn-warning" title="\${themaes[item].title}" href="">온라인 예약하기</a>
+		                    <a class="preview btn btn-warning" title="\${themaes[item].title}" href="${pageContext.request.contextPath}/reservation/reservation.do?branches=branch&&thema=\${themaes[item].title}">온라인 예약하기</a>
 		                </div>
 		            </div>
 		        </li>

@@ -23,6 +23,7 @@
 			params:{resname:$scope.resname,resdate:$scope.date,time:$scope.time,bname:$scope.bname,thema:$scope.thema,phone:$scope.phone,cost:$scope.cost,personal:$scope.personal}
 		}).success(function(data){
 			alert("예약되었습니다.");
+			location.href="/escape/reservation/res_detail.do?bname="+$scope.bname+"&&thema="+$scope.thema+"&&personal="+$scope.personal+"&&cost="+$scope.cost+"&&resname="+$scope.resname+"&&phone="+$scope.phone;
 		});
 		};
 		
