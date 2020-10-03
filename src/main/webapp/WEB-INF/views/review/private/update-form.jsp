@@ -6,9 +6,24 @@
 <meta charset="UTF-8">
 <title>글 수정</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-3.5.1.js"></script>
+<style>
+	body{
+		background-color:#FFF;
+	}
+	h1{
+		color:black;
+	}
+	label{
+		color:black;
+	}	
+</style>
 </head>
 <body>
-<div>
+<jsp:include page="../../templates/nav.jsp"></jsp:include>
+<div class="container">
 	<h1>글 수정 양식 입니다.</h1>
 	<form action="update.do" method="post">
 		<!-- hidden -->
@@ -88,5 +103,6 @@
 		oEditors.getById["content"].setDefaultFont(sDefaultFont, nFontSize);
 	}
 </script>
+<jsp:include page="../../templates/footer.jsp"></jsp:include>
 </body>
 </html>

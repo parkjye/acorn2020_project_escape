@@ -6,14 +6,27 @@
 <meta charset="UTF-8">
 <title>글쓰기</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
 <script src="${pageContext.request.contextPath }/resources/js/angular.min.js"></script>
 <script>
 	var myApp = angular.module("myApp",[]);
 	myApp.controller("formCtrl", function($scope, $http){});
 </script>
+<style>
+	body{
+		background-color:#FFF;
+	}
+	h1{
+		color:black;
+	}
+	label{
+		color:black;
+	}	
+</style>
 </head>
 <body>
-<div ng-controller="formCtrl">
+<jsp:include page="../templates/nav.jsp"></jsp:include>
+<div ng-controller="formCtrl" class="container">
 	<br/>
 	<h1>글쓰기</h1>
 	<form action="insert.do" method="post" name="myForm" novalidate>
@@ -106,5 +119,6 @@
 		oEditors.getById["content"].setDefaultFont(sDefaultFont, nFontSize);
 	}
 </script>
+<jsp:include page="../templates/footer.jsp"></jsp:include>
 </body>
 </html>
