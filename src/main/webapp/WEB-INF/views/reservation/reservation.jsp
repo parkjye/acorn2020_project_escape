@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
 <script src="${pageContext.request.contextPath}/resources/js/angular.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/jquery-3.5.1.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
 <script>
 	var path = window.location.href.split('?')[1];
 	var App=angular.module("App", []);

@@ -8,7 +8,6 @@
 <title>Thema</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css?v=<%=System.currentTimeMillis() %>" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
@@ -139,7 +138,7 @@
 		                <div class="text-center title">\${themaes[item].title}</div>
 		                <div class="text-center">\${themaes[item].type}</div>
 		                <div class="text-center">
-		                    <a class="preview btn btn-warning" title="\${themaes[item].title}" href="">온라인 예약하기</a>
+		                    <a class="preview btn btn-warning" title="\${themaes[item].title}" href="${pageContext.request.contextPath}/reservation/reservation.do">온라인 예약하기</a>
 		                </div>
 		            </div>
 		        </li>
