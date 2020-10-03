@@ -11,10 +11,9 @@ public class ResInfoDto {
 	private String cost;
 	private String personal;
 	public ResInfoDto() {}
-	public ResInfoDto(int res_no, String res_name, String resdate, String time, String bname, String thema, String phone,
+	public ResInfoDto(String res_name, String resdate, String time, String bname, String thema, String phone,
 			String cost, String personal) {
 		super();
-		this.res_no = res_no;
 		this.res_name = res_name;
 		this.resdate = resdate;
 		this.time = time;
