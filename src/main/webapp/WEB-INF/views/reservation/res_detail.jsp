@@ -15,7 +15,11 @@
 <head>
 <meta charset="UTF-8">
 <title>예약 확인</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css?v=<%=System.currentTimeMillis() %>" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
+<script src="${pageContext.request.contextPath}/resources/js/angular.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-3.5.1.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
 <style>
 	table,th,td{
 		border: 1px solid #424242;
@@ -28,10 +32,10 @@
 </head>
 <body>
 <jsp:include page="../templates/nav.jsp"></jsp:include>
-<div class="container" style="margin-top: 2%; margin-bottom: 3%;">
+<div class="container">
 	<h1>예약완료</h1>
 	<hr style="border: 2px solid gray;"/>
-	<div class="table1" style="margin-top: 5%;">
+	<div class="table1">
 		<table class="table">
 				<tr>
 					<th>지점</th>
