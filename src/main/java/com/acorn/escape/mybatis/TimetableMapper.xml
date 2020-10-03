@@ -18,7 +18,7 @@
 	<insert id="resInsert" parameterType="resinfoDto" >
 		INSERT INTO res_info
 		(res_no,res_name,resdate,time,bname,thema,phone,cost,personal)
-		VALUES(#{res_no},#{res_name},#{resdate},#{time},#{bname},#{thema},#{phone},#{cost},#{personal}) 
+		VALUES(res_seq.nextval,#{res_name},#{resdate},#{time},#{bname},#{thema},#{phone},#{cost},#{personal}) 
 	</insert>
 	
 	<update id="soldoutUpdate" parameterType="resinfoDto">
