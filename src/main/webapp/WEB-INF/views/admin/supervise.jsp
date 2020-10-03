@@ -75,7 +75,7 @@ ul.tabs li.current{
 			<p>기준 데이터를 붙여 넣을 기간</p>
 			<div class="input-group input-daterange">
 		    	<input id="startDate" type="text" class="form-control" value="">
-		    	<div class="input-group-addon">to</div>
+		    	<div class="input-group-addon mx-2">to</div>
 		    	<input id="endDate"  type="text" class="form-control" value="">
 			</div>
 			<button id="buttonTest" data-ng-click="">붙여넣기</button>
@@ -203,7 +203,7 @@ ul.tabs li.current{
 				}				
 			},date * 300);
 		}
-		alert("?");
+		alert("완료되었습니다.");
 		
 	}
 	const myBtn = document.getElementById("buttonTest");
