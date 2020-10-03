@@ -8,7 +8,6 @@
 <title>Thema</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css?v=<%=System.currentTimeMillis() %>" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
@@ -47,25 +46,7 @@
 	const box =document.querySelectorAll(".preview"); 
 	const themaele = document.querySelector(".thema");
 	const branchBox = document.querySelector(".branch__box");
-	const getCookieValue = (key) => {
-		  let cookieKey = key + "="; 
-		  let result = "";
-		  const cookieArr = document.cookie.split(";");
-		  
-		  for(let i = 0; i < cookieArr.length; i++) {
-		    if(cookieArr[i][0] === " ") {
-		      cookieArr[i] = cookieArr[i].substring(1);
-		    }
-		    
-		    if(cookieArr[i].indexOf(cookieKey) === 0) {
-		      result = cookieArr[i].slice(cookieKey.length, cookieArr[i].length);
-		      return result;
-		    }
-		  }
-		  return result;
-	}
-	let branch = getCookieValue("branch");
-	
+	let branch = localStorage.getItem("branch");
 	for(let i=0; i<box.length; i++)
 	{
 		box[i].addEventListener("click",function(){
@@ -77,12 +58,10 @@
 				}
 			}
 			this.classList.add("active");
-			//
 			branch = this.dataset.branch;
-			document.cookie = `branch=\${branch};path=/escape`;
-			
+			localStorage.setItem("branch",branch);
 			themaele.style.opacity = 0;
-			render(getCookieValue("branch"));
+			render(branch);
 			setTimeout(() => {
 				themaele.style.opacity = 1;
 			}, 300);
@@ -159,7 +138,7 @@
 		                <div class="text-center title">\${themaes[item].title}</div>
 		                <div class="text-center">\${themaes[item].type}</div>
 		                <div class="text-center">
-		                    <a class="preview btn btn-warning" title="\${themaes[item].title}" href="${pageContext.request.contextPath}/reservation/reservation.do?branches=branch&&thema=\${themaes[item].title}">온라인 예약하기</a>
+		                    <a class="preview btn btn-warning" title="\${themaes[item].title}" href="${pageContext.request.contextPath}/reservation/reservation.do">온라인 예약하기</a>
 		                </div>
 		            </div>
 		        </li>
@@ -170,7 +149,7 @@
 	//최초실행
 	{
 		themaele.style.opacity = 0;
-		render(getCookieValue("branch"));
+		render(branch);
 		setTimeout(() => {
 			themaele.style.opacity = 1;
 		}, 250);

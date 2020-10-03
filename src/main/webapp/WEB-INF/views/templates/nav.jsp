@@ -10,25 +10,25 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav ml-auto mr-auto">
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="${pageContext.request.contextPath }/intro.do">Escape</a>
+        <a class="nav-link" href="${pageContext.request.contextPath}/intro.do">Escape</a>
       </li>
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="${pageContext.request.contextPath }/thema/thema.do">테마</a>
+        <a class="nav-link" href="${pageContext.request.contextPath}/thema/thema.do">테마</a>
       </li>
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="reservation/reservation.do">예약하기</a>
+        <a class="nav-link" href="${pageContext.request.contextPath}/reservation/reservation.do">예약하기</a>
       </li>
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="${pageContext.request.contextPath }/confirm/list.do">예약확인/취소</a>
+        <a class="nav-link" href="${pageContext.request.contextPath}/confirm/list.do">예약확인/취소</a>
       </li>
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="${pageContext.request.contextPath }/notice/hongdae/list.do">공지/이벤트</a>
+        <a class="nav-link" href="${pageContext.request.contextPath}/notice/hongdae/list.do">공지/이벤트</a>
       </li>
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" id="mapInfo" href="${pageContext.request.contextPath }/mapinfo/mapinfo.do">오시는길</a>
+        <a class="nav-link" id="mapInfo" href="${pageContext.request.contextPath}/mapinfo/mapinfo.do">오시는길</a>
       </li>            
       <li class="nav-item ml-3 mr-3">
-        <a class="nav-link" href="#">가맹문의</a>
+        <a class="nav-link" href="${pageContext.request.contextPath}/review/list.do">후기게시판</a>
       </li>      
     </ul>
   </div>

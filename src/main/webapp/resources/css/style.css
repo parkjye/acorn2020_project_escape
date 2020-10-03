@@ -1,7 +1,3 @@
-#bootstrap-overrides .navbar-padding{
-	/*padding: 0.5rem 5rem;*/
-}
-
 #bootstrap-overrides .idbox{
 	width: 14rem;
 }
@@ -11,13 +7,17 @@
 }
 @font-face {
 	font-family: 'HeirofLightBold';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff');
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff'),
+	url(NanumGothicR.woff) format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 body{
     font-family: 'HeirofLightBold';
 }	
+input{
+	font-family: NanumGothicR;
+}
 #myCarousel{
     height: 500px;
     margin: 0 auto;
@@ -70,6 +70,7 @@ hr.solid {
 .circle_padding{
   	padding: 5px;
 }
+/* map info */
 #branch {
 	margin-top: 5%;
     text-align: center;
@@ -158,11 +159,32 @@ hr.solid {
 .thema .test{
 	border: 1px solid #f0f;
 }
+.note span{
+	font-size : 0.7vw;
+}
 .branch__box a{
 	margin: 5px;
 }
-@media (max-width: 575.98px) { }
 
+
+/* Notice */
+th,tr{
+	text-align: center; 
+}
+.btn{
+	/*color:Tomato;*/
+}
+.contents{
+	width: 100%;
+	padding-top: 50px;
+}
+
+
+
+
+
+
+@media (max-width: 575.98px) { }
 
 @media (max-width: 767.98px) {
 	.carousel-caption {
@@ -171,8 +193,6 @@ hr.solid {
 		  top: 50%;
 	}		
 }
-
-
 @media (max-width: 991.98px) { 
 	.carousel-caption {
 	  transform: translateY(-55%);
@@ -180,6 +200,4 @@ hr.solid {
 	  top: 55%;
 	}	
 }
-
-
 @media (max-width: 1199.98px) { }

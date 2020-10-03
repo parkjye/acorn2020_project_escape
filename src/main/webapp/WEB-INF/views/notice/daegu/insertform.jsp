@@ -6,15 +6,11 @@
 <meta charset="UTF-8">
 <title>/views/notice/insertform.jsp</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.css" />
+<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js" ></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
 <style>
 	#content{
-		display: none;
 		width: 100%;
-		height: 400px;
-	}
-	.button{
-		position: relative;
-		left:1000px;
 	}
 </style>
 <style type="text/css">
@@ -46,49 +42,50 @@ select {
   border-radius: 0.5em;
   box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
 }
-
-
 }
-
 </style>
 </head>
 <body>
 <jsp:include page="../../templates/nav.jsp"></jsp:include>
 <div class="container">
-	<br/>
-	<h3>공지/이벤트 작성</h3>
-	<form action="insert.do" method="post" id="notice">
-		<label for="condition">지점 선택</label>
-		</br>
-		<select name="branch" id="branch">
-			<option value="천호점">천호점</option>
-			<option value="대구점">대구점</option>
-			<option value="대전두산점">대전두산점</option>
-			<option value="홍대점">홍대점</option>
-			<option value="인천구월점">인천구월점</option>
-			<option value="잠실점">잠실점</option>
-			<option value="전주점">전주점</option>
-			<option value="수유점">수유점</option>
-		</select>
-		<div class="form-group">
-		</br>
-			<label for="writer">작성자</label>
-			<input class="form-control" type="text" value="${aid }" disabled/>
-		</div>
-		<div class="form-group">
-			<label for="title">제목</label>
-			<input class="form-control" type="text" name="title" id="title"/>
-		</div>
-		<div class="form-group">
-			<label for="content">내용</label>
-			<textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
-		</div>
-		<div class="button">
-			<button class="btn btn-outline-primary" type="submit" >저장</button>
-			<button class="btn btn-outline-danger" type="reset">취소</button>
-		</div>
-	</form>
+	<!-- 타이틀 -->
+	<div class="row">
+		<h3>공지/이벤트 작성</h3>
+	</div>
+	<!-- 폼 -->
+	<div class="row">
+		<form class="w-100" action="insert.do" method="post" id="notice">
+			<label for="condition">지점 선택</label>
+			<select name="branch" id="branch">
+				<option value="천호점">천호점</option>
+				<option value="대구점">대구점</option>
+				<option value="대전두산점">대전두산점</option>
+				<option value="홍대점">홍대점</option>
+				<option value="인천구월점">인천구월점</option>
+				<option value="잠실점">잠실점</option>
+				<option value="전주점">전주점</option>
+				<option value="수유점">수유점</option>
+			</select>
+			<div class="form-group">
+				<label for="writer">작성자</label>
+				<input class="form-control" type="text" value="${aid }" disabled/>
+			</div>
+			<div class="form-group">
+				<label for="title">제목</label>
+				<input class="form-control" type="text" name="title" id="title"/>
+			</div>
+			<div class="form-group">
+				<label for="content">내용</label>
+				<textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
+			</div>
+			<div class="button">
+				<button class="btn btn-outline-primary" type="submit"  >저장</button>
+				<button class="btn btn-outline-danger" type="reset">취소</button>
+			</div>
+		</form>
+	</div>
 </div>
+
 <script src="${pageContext.request.contextPath }/SmartEditor/js/HuskyEZCreator.js"></script>
 <script>
 	var oEditors = [];
@@ -141,18 +138,21 @@ select {
 		var nFontSize = 24;
 		oEditors.getById["content"].setDefaultFont(sDefaultFont, nFontSize);
 	}
+	
 </script>
 <script src="${pageContext.request.contextPath }/resources/js/jquery-3.5.1.js"></script>
 <script>
 	$("#notice").on("submit", function(){	
 		var inputTitle=$("#title").val();
 		if(inputTitle==""){
-			alert("제목를(을) 입력하세요");
-			$("#title");
+			alert("제목을 입력하세요");
+			//$("#title");
 			return false; 
 		}
+		else{
+			submitContents(this);
+		}
 	});
-
 </script>
 <jsp:include page="../../templates/footer.jsp"></jsp:include>
 </body>

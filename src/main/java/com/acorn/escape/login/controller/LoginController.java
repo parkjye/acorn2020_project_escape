@@ -26,9 +26,8 @@ public class LoginController {
 			HttpSession session) {
 		loginService.loginProcess(dto, mView, session);
 		String aid=(String)session.getAttribute("aid");
-		// 예약관리 페이지 구현되면 다이렉트이동 시킬예정
 		if(aid != null) {
-			mView.setViewName("home");
+			mView.setViewName("admin/supervise");
 			return mView;
 		}else { 
 			mView.setViewName("loginFail_redirect");

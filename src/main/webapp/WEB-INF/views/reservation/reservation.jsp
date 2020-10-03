@@ -7,14 +7,16 @@
 <meta charset="UTF-8">
 <title>예약하기</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css?v=<%=System.currentTimeMillis() %>" />
-<script src="../resources/js/angular.min.js"></script>
-<script src="../resources/js/jquery-3.5.1.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
+<script src="${pageContext.request.contextPath}/resources/js/angular.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-3.5.1.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
 <script>
 	var path = window.location.href.split('?')[1];
 	var App=angular.module("App", []);
 	App.controller("timeCtrl", function($scope, $http, $location){
 		$scope.date=new Date().toISOString().split("T")[0]; 
-		$scope.branch = [{id:"홍대점",name:"홍대점"},{id:"대구점",name:"대구점"},{id:"인천구월점",name:"인천구월점"},{id:"전주점",name:"전주점"},{id:"잠실점",name:"잠실점"},{id:"대전두산점",name:"대전두산점"},{id:"천호점",name:"천호점"},{id:"수유점",name:"수유점"}];
+		$scope.branch = [{id:"홍대점",name:"홍대점"},{id:"대구점",name:"대구점"},{id:"인천구월점",name:"인천구월점"},{id:"전주점",name:"전주점"},{id:"잠실점",name:"잠실점"},{id:"대전둔산점",name:"대전둔산점"},{id:"천호점",name:"천호점"},{id:"수유점",name:"수유점"}];
 		$scope.themah = [{id:"total",name:"전체테마"},{id:"피라미드",name:"파라미드의 비밀 ★★★☆☆"},{id:"헨젤과 그레텔",name:"헨젤과 그레텔 ★★★★☆"},{id:"Towering",name:"Towering ★★★★☆"},{id:"Gestapo",name:"Gestapo ★★★★☆"},{id:"Monkey House",name:"Monkey House ★★★☆☆"},{id:"장기밀매",name:"장기밀매 ★★★★★"},{id:"Deliver",name:"Deliver ★★★★☆"},{id:"Romeo point",name:"Romeo Point ★★★★☆"}];
 		$scope.themad = [{id:"total",name:"전체테마"},{id:"장기밀매",name:"장기밀매 ★★★★★"},{id:"Deliver",name:"Deliver ★★★★☆"},{id:"Monkey House",name:"Monkey House ★★★☆☆"},{id:"Gestapo",name:"Gestapo ★★★★☆"},{id:"헨젤과 그레텔",name:"헨젤과 그레텔 ★★★★☆"},{id:"알포인트",name:"알포인트 ★★★★☆"},{id:"피라미드",name:"피라미드 ★★★☆☆"},{id:"폼페이최후의날",name:"폼페이최후의날 ★★★★☆"},{id:"집행",name:"집행 ★★★★☆"},{id:"카타콤",name:"카타콤 ★★★★☆"}];
 		$scope.themai = [{id:"total",name:"전체테마"},{id:"타이타닉",name:"타이타닉 ★★★★☆"},{id:"신데렐라",name:"신데렐라 ★★★★☆"},{id:"장기밀매",name:"장기밀매 ★★★★★"},{id:"Towering",name:"Towering ★★★★☆"},{id:"집착",name:"집착 ★★★★☆"}];
@@ -74,7 +76,7 @@
 				$scope.list=data.list;
 			});
 		}else if(path=='doosan'){
-			$scope.branches="대전두산점";
+			$scope.branches="대전둔산점";
 			$scope.thema="total";
 			$http({
 				url:"/escape/reservation/reservation_ajax.do",
@@ -111,7 +113,6 @@
 				params:{name:$scope.branches,thema:$scope.thema,date:$scope.date}
 			}).success(function(data){
 				$scope.list=data.list;
-				
 			});
 		};
 	});
@@ -120,27 +121,27 @@
 <body>
 <jsp:include page="../templates/nav.jsp"></jsp:include>
 <div data-ng-controller="timeCtrl" class="container">
-	<h1 class="text-center">{{branches}} 예약하기</h1>
+	<h1 class="text-center branch__tag">{{branches}} 예약하기</h1>
 	<div class="form-group row">
 		<div class="col-4">
 			<label for="dateselect">날짜선택</label>
-			<input type="date" data-ng-model="date" data-ng-change="dateChange()" class="form-control" min="2020-09-20" max="2020-10-05" />
+			<input id="selectDate" type="date" data-ng-model="date" data-ng-change="change()" class="form-control" min="2020-09-20" />
 		</div>
 		<div class="col-4">
 			<label for="">지점선택</label>
-			<select data-ng-model="branches" class="form-control">
+			<select id="selectBranch" data-ng-model="branches" data-ng-change="change()" class="form-control">
 				<option data-ng-repeat="x in branch" value="{{x.id}}">{{x.name}}</option>
 			</select>
 		</div>
 		<div class="col-4">
 			<label for="dateselect">테마</label>
-			<select data-ng-model="thema" data-ng-change="change()" class="form-control">
+			<select data-ng-model="thema" data-ng-change="change()" class="form-control themaSelect">
 				<option data-ng-if="branches == '홍대점'" data-ng-repeat="x in themah" value="{{x.id}}">{{x.name}}</option>
 				<option data-ng-if="branches == '대구점'" data-ng-repeat="x in themad" value="{{x.id}}">{{x.name}}</option>
 				<option data-ng-if="branches == '인천구월점'" data-ng-repeat="x in themai" value="{{x.id}}">{{x.name}}</option>
 				<option data-ng-if="branches == '전주점'" data-ng-repeat="x in themaj" value="{{x.id}}">{{x.name}}</option>
 				<option data-ng-if="branches == '잠실점'" data-ng-repeat="x in themaja" value="{{x.id}}">{{x.name}}</option>
-				<option data-ng-if="branches == '대전두산점'" data-ng-repeat="x in themada" value="{{x.id}}">{{x.name}}</option>
+				<option data-ng-if="branches == '대전둔산점'" data-ng-repeat="x in themada" value="{{x.id}}">{{x.name}}</option>
 				<option data-ng-if="branches == '천호점'" data-ng-repeat="x in themac" value="{{x.id}}">{{x.name}}</option>
 				<option data-ng-if="branches == '수유점'" data-ng-repeat="x in themas" value="{{x.id}}">{{x.name}}</option>
 			</select>
@@ -167,5 +168,36 @@
 	</div>
 </div>
 <jsp:include page="../templates/footer.jsp"></jsp:include>
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+	let branch = localStorage.getItem("branch");
+	const selectElement = document.getElementById("selectBranch");
+	selectElement.value = branch;
+});
+
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+2; //January is 0!
+//오늘로부터 2개월뒤까지만 달력에 표시함 
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+    if(mm>12){
+    	mm = mm%12;
+    	yyyy+=1;
+        if(mm<10){
+            mm='0'+mm
+        }
+    }
+
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("selectDate").setAttribute("max", today);
+
+</script>
 </body>
 </html>
