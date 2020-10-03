@@ -17,10 +17,12 @@
 	</insert>
 	
 	<select id="selectOne" parameterType="adminDto" resultType="adminDto">
-		select r.time,r.thema,info.res_name
-		from res_state r
-		inner join res_info info on r.bname=info.bname 
-		where r.bname=#{bname} and r.resdate=#{resdate}
-		ORDER BY time ASC
+		select a.time, a.thema, b.res_name, a.state
+		from res_state a, res_info b
+		where a.thema=b.thema(+) and a.resdate=b.resdate(+) and a.time=b.time(+) and a.resdate =#{resdate} and a.bname=#{bname}
+		order by a.resdate asc, a.time
 	</select>
+	
+
+
 </mapper>

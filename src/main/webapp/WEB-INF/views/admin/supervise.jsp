@@ -53,7 +53,22 @@ ul.tabs li.current{
 	<div id="tab-1" class="tab-content current">
 		<div class="row">
 			<p>기준 데이터</p>
-			<input id= "bname"  type="text" />
+		</div>
+		<div class="row">
+			<label for="">지점명</label>
+			<select id="bname">
+				<option value="홍대점">홍대점</option>
+				<option value="대구점">대구점</option>
+				<option value="인천구월점">인천구월점</option>
+				<option value="전주점">전주점</option>
+				<option value="잠실점">잠실점</option>
+				<option value="대전둔산점">대전둔산점</option>
+				<option value="천호점">천호점</option>
+				<option value="수유점">수유점</option>
+			</select>			
+		</div>
+		<div class="row">
+			<label for="">요일</label>
 			<input type="text" id="datePicker" class="form-control" value="">
 		</div>
 		<div class="row">
@@ -90,22 +105,19 @@ ul.tabs li.current{
 			<table class="table table-striped mt-3">
 				<thead>
 					<tr class="row">
-						<th class="col-1 text-center">시간</th>
-						<th class="col-5 text-center">테마</th>
+						<th class="col-3 text-center">시간</th>
+						<th class="col-7 text-center">테마</th>
 						<th class="col-1 text-center">예약자성함</th>
-						<th class="col-1 text-center">테마</th>
-						<th class="col-4 text-center">상태</th>
+						<th class="col-1 text-center">상태</th>
 
 					</tr>
 				</thead>
 				<tbody id="tableItems">
 					<tr class="row">
+						<td class="col-3 text-center"></td>
+						<td class="col-7 text-center"></td>
 						<td class="col-1 text-center"></td>
-						<td class="col-5 text-center"></td>
 						<td class="col-1 text-center"></td>
-						<td class="col-1 text-center"></td>
-						<td class="col-2 text-center" ><a><span class="badge badge-danger">매진 처리</span></a></td>
-						<td class="col-2 text-center" ><a><span class="badge badge-warning">예약 취소 처리</span></a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -200,7 +212,6 @@ ul.tabs li.current{
 		const startDate = document.getElementById("startDate");
 		const endDate = document.getElementById("endDate");
 		let dateList = getDateRangeData(startDate.value,endDate.value);
-		console.log(dateList);
 		
 		const standardDate = document.getElementById("datePicker");
 		const bname =  document.getElementById("bname");
@@ -282,21 +293,34 @@ ul.tabs li.current{
 			body:params
 		});
 		const result = await response.json(); 
-		console.log(result);
 		return result;
 	}
 	const tableTd = document.getElementById("tableItems");
 	function renderTable(item){
-		tableTd.innerHTML +=`
-			<tr class="row">
-				<td class="col-1 text-center">\${item.time}</td>
-				<td class="col-5 text-center">\${item.thema}</td>
-				<td class="col-1 text-center">\${item.res_name}</td>
-				<td class="col-1 text-center">\${item.state}</td>
-				<td class="col-2 text-center" ><a><span class="badge badge-danger">매진 처리</span></a></td>
-				<td class="col-2 text-center" ><a><span class="badge badge-warning">예약 취소 처리</span></a></td>
-			</tr>
-		`;
+		console.log(item.res_name);
+		if(item.res_name === null) item.res_name = "";
+		if(item.res_name === "")
+		{
+			tableTd.innerHTML +=`
+				<tr class="row">
+					<td class="col-3 text-center">\${item.time}</td>
+					<td class="col-7 text-center">\${item.thema}</td>
+					<td class="col-1 text-center">\${item.res_name}</td>
+					<td class="col-1 text-center">\${item.state}</td>
+
+				</tr>
+			`;
+		}
+		else{
+			tableTd.innerHTML +=`
+				<tr class="row">
+					<td class="col-3 text-center">\${item.time}</td>
+					<td class="col-7 text-center">\${item.thema}</td>
+					<td class="col-1 text-center">\${item.res_name}</td>
+					<td class="col-1 text-center">\${item.state}</td>
+				</tr>
+			`;
+		}
 	}
 	function addHandlerSchedule(){
 		const day = document.getElementById("selectDate");
@@ -305,14 +329,12 @@ ul.tabs li.current{
 		day.addEventListener("change",async function(){
 			renderReset();
 			const items = await getOneDaySchedule(day,branch);
-			console.log('음'+items);
 			render(items);
 		});
 		
 		branch.addEventListener("change",async function(){
 			renderReset();
 			const items = await getOneDaySchedule(day,branch);
-			console.log('음'+items);
 			render(items);
 		});
 	}
