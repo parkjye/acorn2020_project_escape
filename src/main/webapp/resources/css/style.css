@@ -7,13 +7,17 @@
 }
 @font-face {
 	font-family: 'HeirofLightBold';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff');
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff'),
+	url(NanumGothicR.woff) format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 body{
     font-family: 'HeirofLightBold';
 }	
+input{
+	font-family: NanumGothicR;
+}
 #myCarousel{
     height: 500px;
     margin: 0 auto;
