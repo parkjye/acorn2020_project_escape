@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css?v=<%=System.currentTimeMillis() %>"/>
 <script src="${pageContext.request.contextPath}/resources/js/jquery-3.5.1.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js" /></script>
 </head>
 <body>
 <jsp:include page="../templates/nav.jsp"></jsp:include>
@@ -29,9 +30,7 @@
 						<label>조회</label> <span>${dto.viewcount }</span>회
 					</div>						
 					<div>
-						<button class="btnList btn btn-outline-primary">
-							<a href="list.do">목록보기</a>
-						</button>
+						<a class="btn btn-outline-primary" href="list.do">목록보기</a>
 					</div>
 				</div>
 				<hr class="w-100 solid">
