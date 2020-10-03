@@ -47,7 +47,7 @@ ul.tabs li.current{
 	<div class="container">
 	<ul class="tabs">
 		<li class="tab-link current" data-tab="tab-1">일정 복사</li>
-		<li class="tab-link" data-tab="tab-2">일정 수정</li>
+		<li class="tab-link" data-tab="tab-2">일정 확인</li>
 	</ul>
 	
 	<div id="tab-1" class="tab-content current">
