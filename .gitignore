@@ -3,10 +3,9 @@
 */*.project
 */*.classpath
 *.sql
-img/
 Servers
 /build/
-
+src/main/webapp/SmartEditor/img
 ### Eclipse ###
 .metadata
 bin/
