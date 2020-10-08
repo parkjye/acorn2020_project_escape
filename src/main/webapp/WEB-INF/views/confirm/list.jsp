@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -27,11 +28,11 @@
 					</tr>
 					<tr>
 						<th class="text-center">연락처 </th>
-						<td class="text-left"><input  type="text" name="phone" id="phone" class="form-control" placeholder=" '-' 없이 숫자만 입력해주세요. "></td>
+						<td class="text-left"><input type="text" name="phone" id="phone" class="form-control" placeholder=" '-' 없이 숫자만 입력해주세요. "></td>
 					</tr>
 					<tr>
 						<th class="text-center">예약확인번호 </th>
-						<td class="text-left"><input type="text" name="res_no" id="res_no" class="form-control"  ></td>
+						<td class="text-left"><input type="number" name="res_no" id="res_no" class="form-control"/> </td>
 					</tr>
 				</tbody>
 			</table>	
@@ -40,8 +41,8 @@
 	</br>
 	<div class="row" style="padding-top: 30px; padding-right: 45px;">
 		<div class="col-sm-12 col-md-12 text-center " >
-			<input type="submit" class="btn btn-primary btn-lg" value="예약 확인" onclick="javascript: form.action='/escape/confirm/confirm.do';"/>
-			<input type="submit" class="btn btn-danger btn-lg" value="예약 취소" onclick="javascript: form.action='/escape/confirm/delete.do';"/>
+			<input type="submit" class="btn btn-primary btn-lg" value="예약 확인" ng-disabled="form.$invalid" onclick="javascript: form.action='/escape/confirm/confirm.do';"/>
+			<input type="submit" class="btn btn-danger btn-lg" value="예약 취소" ng-disabled="form.$invalid" onclick="javascript: form.action='/escape/confirm/delete.do';"/>
 		</div>
 	</div>
 	</form>

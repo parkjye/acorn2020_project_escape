@@ -21,7 +21,7 @@
 	<update id="update" parameterType="confirmDto">
 		UPDATE res_state
 		SET state = '예약하기'
-		WHERE resdate=#{resdate} AND time=#{time} AND thema=#{thema} AND bname=#{bname}
+		
 	</update>
 	
 </mapper>
